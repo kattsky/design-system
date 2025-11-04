@@ -1,740 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Link to Google Font - Montserrat font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Link to styles.css -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Link to outback-styles.css -->
-    <link rel="stylesheet" href="outback-styles.css">
-
-    <!-- Link to Font Awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title>Outback Nursery &amp; Garden Centre</title>
-  </head>
-
-  <body class="c-body-wrapper u-ff-sans-serif u-primary-bgcolor desktop-width">
-    <!-- Header section -->
-    <header class="c-top-nav-wrap u-primary-bgcolor">
-      <div class="c-top-nav-bar l-flex-wrapper">
-        <div class="c-top-nav__logo-on l-mt-2 l-mb-1">
-          <a href="index.html">
-            <img
-              class="c-top-nav__logo-img-on"
-              src="images/outback-nursery-logo.png"
-              alt="Outback Nursery & Garden Centre logo">
-          </a>
-        </div>
-
-        <!-- Navigation bar -->
-        <!-- Mobile navbar using hamburger icon
-                    Below div block is sourced from https://edezekiel.medium.com/css-only-responsive-navigation-menu-c36ad02751e8
-                    for responsive menu without JS -->
-        <input type="checkbox" id="toggle-menu" class="c-top-nav__toggle is-on-mobile-hidden">
-        <label for="toggle-menu" class="c-top-nav__toggle-icon is-on-desktop-hidden">
-          <span class="c-top-nav__toggle-icon c-top-nav__toggle-icon--transform"></span>
-        </label>
-
-        <nav class="c-top-nav__menu-list">
-          <ul class="c-top-nav__links-list is-on-mobile-hidden is-on-desktop-visible l-flex l-flex-row l-flex-row">
-            <li class="c-top-nav__link-item">
-              <a class="c-top-nav__link-item--hover c-top-nav__link-items--active u-navlinks"
-                href="coming-soon.html"
-                >Our Offerings</a>
-            </li>
-            <li class="c-top-nav__link-item">
-              <a class="c-top-nav__link-item--hover c-top-nav__link-items--active u-navlinks"
-                href="coming-soon.html">Green Tips</a>
-            </li>
-            <li class="c-top-nav__link-item">
-              <a class="c-top-nav__link-item--hover c-top-nav__link-items--active u-navlinks"
-                href="coming-soon.html">Our Journey</a>
-            </li>
-            <li class="c-top-nav__link-item">
-              <a class="c-top-nav__link-item--button u-button u-primary-cta-bgcolor u-primary-cta-font l-p-1"
-                href="coming-soon.html">Chat with us</a>
-            </li>
-          </ul>
-        </nav>
+    <!-- Link to design-system.css -->
+    <link rel="stylesheet" href="design-system.css">
+   
+    <title>Design System</title>
+</head>
+<body class="c-body-wrapper u-primary-bgcolor desktop-width">
+    
+<!-- Header section -->
+  <header class="c-top-nav-wrapper u-primary-bgcolor">
+    <!-- Place page title within header tag -->
+    <div class="c-top-nav l-flex-wrapper l-mx-2">
+      <div class="c-top-nav__page-title u-primary-font l-my-2">
+          <span class="c-top-nav__heading-name u-ff-sans-serif u-h1">
+            <a class="c-top-nav__heading-link c-top-nav__heading-link--hover c-top-nav__heading-link--current u-navlinks" href="design-system.html">Design System</a>
+          </span>
       </div>
-    </header>
+      
+      <!-- Top-level navbar -->
+      <nav class="c-top-nav__menu u-ff-sans-serif l-my-2">
+          <div class="c-top-nav__links is-mobile-hidden is-desktop-visible u-primary-font">        
+              <a class="c-top-nav__link-items c-top-nav__link-items--hover c-top-nav__link-items--active u-navlinks" href="about-me.html">About Me</a>
+              <a class="c-top-nav__link-items c-top-nav__link-items--hover c-top-nav__link-items--active u-navlinks" href="index.html">Demo Site</a>
+          </div> 
+      </nav>
+  </div>
+  </header>
 
-    <main
-      class="c-content-box u-ff-sans-serif u-primary-font max-width-mobile center-content"
-    >
-      <!-- Hero section -->
-      <section class="c-hero">
-        <h1 class="c-hero__heading u-primary-font u-h1 l-p-1">
-          Bring home<br>the Outback Oasis
-        </h1>
-        <div class="c-hero__overlay"></div>
-        <img class="c-hero__img" src="images/evergreen.jpg" alt="couple carrying potted evergreen tree">
-        <a class="c-hero__explore-link l-p-1 u-primary-cta-bgcolor u-primary-cta-font u-button l-ml-1-25 l-mt-1"
-          href="coming-soon.html">Explore Our Nursery</a>
-      </section>
+    <!-- Vertical sidebar navigation -->
+    <aside class="c-sidebar u-primary-font u-ff-sans-serif">
+      <!-- Mobile navbar using hamburger icon
+      Below div block is sourced from https://edezekiel.medium.com/css-only-responsive-navigation-menu-c36ad02751e8
+      for responsive menu without JS -->
+    <input type="checkbox" id="toggle-side-menu" class="c-sidebar__mobile-toggle is-mobile-hidden">
+    <label for="toggle-side-menu" class="c-sidebar__mobile-toggle-icon is-desktop-hidden"><span class="c-sidebar__mobile-toggle-icon c-sidebar__mobile-toggle-icon--transform"></span></label>
+    <nav class="c-sidebar__menu is-mobile-hidden is-desktop-visible l-ml-2">
+      <ul class="c-sidebar__menu-list">
+          <br>
+          <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="about-me.html">About Me</a></li>
+          <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="index.html">Demo Site</a></li>
+          <br>
+      </ul>
+      <p class="c-sidebar__menu-category">Branding</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="colours.html">01 Colours</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="typography.html">02 Typography</a></li>
+        <br>
+      </ul>
 
-      <!-- Products Category section -->
-      <section class="c-category center-content l-flex l-flex-column l-my-2 l-pt-1">
-        <!-- Products Category section header - mobile view -->
-        <div class="c-category__mobile-view is-on-desktop-hidden">
-          <h2 class="c-category__mobile-heading u-h2 l-mb-1-5 l-mt-3-5">
-            Unlock <br>
-            Nature's Palette
-          </h2>
-          <a class="c-category__cta-link l-flex-center-self u-subheading u-primary-font l-mt-1"
-            href="coming-soon.html"
-            >Find your favorites here.</a>
-        </div>
-        <!-- Products Category section header - desktop view -->
-        <div
-          class="c-category__desktop-view l-flex-column l-flex-center-items is-on-mobile-hidden is-on-desktop-visible">
-          <h2 class="c-category__desktop-heading u-h2 l-mb-1-5 l-mt-3-5">
-            Unlock Nature's Palette
-          </h2>
-          <a class="c-category__cta-link u-subheading u-primary-font"
-            href="coming-soon.html">Find your favorites here.</a>
-        </div>
+      <p class="c-sidebar__menu-category">Utilities</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="spacing.html">03 Spacing</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="containers.html">04 Containers</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="images.html">05 Images</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="interactive.html">06 Interactive</a></li>
+        <br>
+      </ul>
 
-        <div class="c-category__overview u-body l-my-2 center-content">
-          <!-- For tabs -->
-          <!-- Pagination is coded with https://codepen.io/josetxu/pen/vYvgJVE with modifications -->
-          <div class="c-category__tabs">
-            <ul class="c-category__list l-flex l-flex-row">
-              <li class="c-category__list-item c-category__list-item--active l-p-1"><span>Conifers</span></li>
-              <li class="c-category__list-item l-p-1"><span>Deciduous Trees</span></li>
-              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Evergreen Trees</span></li>
-              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Grasses &amp; Bamboos</span></li>
-              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Vines</span></li>
-              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Edibles</span></li>
-              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Japanese Maples</span></li>
-              <li class="c-category__list-item l-p-1 is-on-desktop-hidden"><span>Expand Your Options</span>
-                <ul class="c-category__drop-down u-primary-bgcolor">
-                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Evergreen Trees</a></li>
-                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Grasses &amp; Bamboos</a></li>
-                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Vines</a></li>
-                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Edibles</a></li>
-                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Japanese Maples</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
-          >
-            <!-- Category information with img and text -->
-            <img class="c-category__img" src="images/spruce.jpg" alt="Potted Spruce Tree">
-            <div class="c-category__text-wrapper l-p-1">
-              <p class="c-category__text l-my-1">
-                Elevate your home's landscape with the timeless beauty and  enduring elegance of conifers.
-              </p>
-              <p class="c-category__text l-my-1">
-                From privacy screening to offering year-round visual interest, these remarkably low-maintenance trees add charm and functionality to your outdoor sanctuary.
-              </p>
-              <p class="c-category__text l-my-1">
-                Conifers bring timeless charm to your landscape with year-round greenery, offering privacy screening and low-maintenance upkeep. Their diverse forms inspire endless landscaping possibilities, while their scent and graceful branches evoke serene wilderness, elevating your outdoor sanctuary to new levels of beauty and tranquility.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
-          >
-            <!-- Category information with img and text -->
-            <img class="c-category__img" src="images/albizia.jpg" alt="Albizia">
-            <div class="c-category__text-wrapper l-p-1">
-              <p class="c-category__text l-my-1">
-                Enhance your outdoor space with the captivating allure of Deciduous Trees.
-              </p>
-              <p class="c-category__text l-my-1">
-                From vibrant foliage that transforms with the seasons to providing shade and shelter, these trees offer a dynamic and picturesque addition to your landscape.
-              </p>
-              <p class="c-category__text l-my-1">
-                Deciduous trees bring a dynamic rhythm to your outdoor environment, showcasing a kaleidoscope of colors as their foliage transitions with the changing seasons. From the vibrant greens of spring to the fiery hues of autumn, their ever-changing palette offers an enchanting spectacle that invigorates your landscape throughout the year.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
-          >
-            <!-- Category information with img and text -->
-            <img class="c-category__img" src="images/azalea.jpg" alt="A Beautiful Azalea Plant with Pink Flowers">
-            <div class="c-category__text-wrapper l-p-1">
-              <p class="c-category__text l-my-1">
-                Immerse yourself in the enduring elegance of Evergreen Trees, a cornerstone of any picturesque landscape.
-              </p>
-              <p class="c-category__text l-my-1">
-                Whether used as privacy screens, focal points, or to provide year-round interest, these resilient trees offer both aesthetic appeal and practical functionality.
-              </p>
-              <p class="c-category__text l-my-1">
-                Evergreen trees stand as steadfast guardians, infusing your landscape with enduring elegance and year-round vitality. Their lush foliage remains verdant and vibrant through all seasons, offering a timeless backdrop of greenery that captivates the eye and soothes the soul.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
-          >
-            <!-- Category information with img and text -->
-            <img class="c-category__img" src="images/carex.jpg" alt="Potted Carex Plant">
-            <div class="c-category__text-wrapper l-p-1">
-              <p class="c-category__text l-my-1">
-                Embrace the natural elegance of Grasses &amp; Bamboos.
-              </p>
-              <p class="c-category__text l-my-1">
-                With their graceful foliage and versatile appeal, these plants bring a touch of serenity and texture to your outdoor haven.
-              </p>
-              <p class="c-category__text l-my-1">
-                Grasses and bamboos offer a harmonious blend of natural elegance and tranquil beauty, enriching your outdoor haven with their graceful foliage and versatile charm. Whether swaying gently in the breeze or standing tall as architectural accents, these plants infuse your landscape with a sense of serenity and texture that captivates the senses.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
-          >
-            <!-- Category information with img and text -->
-            <img class="c-category__img" src="images/honeysuckle.jpg" alt="Coral Honeysuckle">
-            <div class="c-category__text-wrapper l-p-1">
-              <p class="c-category__text l-my-1">
-                Unleash the beauty of Vines in your outdoor oasis.
-              </p>
-              <p class="c-category__text l-my-1">
-                From gracefully cascading down walls to creating lush natural privacy screens, vines offer endless possibilities for enhancing your outdoor sanctuary and transforming it into a tranquil haven of natural beauty and serenity.
-              </p>
-              <p class="c-category__text l-my-1">
-                Vines weave a tapestry of natural beauty within your outdoor oasis, offering versatile charm and endless possibilities for enhancement. Whether cascading gracefully down walls or weaving intricate patterns as natural privacy screens, these plants add an enchanting touch of whimsy and allure to your outdoor sanctuary.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
-          >
-            <!-- Category information with img and text -->
-            <img class="c-category__img" src="images/hazelnut.jpg" alt="Hazelnuts in White Bowl on Cutting Board">
-            <div class="c-category__text-wrapper l-p-1">
-              <p class="c-category__text l-my-1">
-                Indulge in the bounty of Edibles.
-              </p>
-              <p class="c-category__text l-my-1">
-                From the crisp sweetness of apples to the luscious juiciness of pears, and the vibrant burst of cherries and plums, these fruits offer a delightful harvest for your garden.
-              </p>
-              <p class="c-category__text l-my-1">
-                Indulge in the abundance of edibles, where the crisp sweetness of apples, the luscious juiciness of pears, and the vibrant burst of cherries and plums await your harvest. These fruits not only tantalize the taste buds but also add a bountiful array of colors and textures to your garden, creating a feast for both the eyes and the palate.
-              </p>
-            </div>
-          </div>
-          <div
-            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
-          >
-            <!-- Category information with img and text -->
-            <img class="c-category__img" src="images/full-moon-maple.jpg" alt="Full Moon Maple">
-            <div class="c-category__text-wrapper l-p-1">
-              <p class="c-category__text l-my-1">
-                Embrace the elegance of Japanese Maples in your garden.
-              </p>
-              <p class="c-category__text l-my-1">
-                With their delicate leaves and stunning foliage colors, Japanese Maples bring a touch of sophistication and beauty to any landscape, making them an exquisite choice for discerning gardeners seeking to elevate their outdoor spaces.
-              </p>
-              <p class="c-category__text l-my-1">
-                Elevate your outdoor oasis with the timeless allure of Japanese Maples. Whether in a tranquil Zen garden or enhancing a vibrant floral display, these graceful trees offer a captivating focal point, inviting you to indulge in nature's splendor. Cultivate a haven of tranquility with Japanese Maples in your own backyard.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <p class="c-sidebar__menu-category">Navigation</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="navbars.html">07 Navbars</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="breadcrumbs.html">08 Breadcrumbs</a></li>
+        <br>
+      </ul>
 
-      <!-- Services section -->
-      <section
-        class="c-services l-flex l-flex-column center-content l-my-2 l-pt-1"
-      >
-        <h2 class="c-services__heading u-h2 l-mb-1-5 l-mt-3-5">
-          Enhance Your Experience
-        </h2>
+      <p class="c-sidebar__menu-category">Blocks</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="hero.html">09 Hero</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="carousel.html">10 Carousel</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="footer.html">11 Footer</a></li>
+        <br>
+      </ul>
 
-        <div
-          class="c-services__card-wrapper l-flex l-flex-column l-flex-space-between l-mt-1 full-width-wrapper"
-        >
-          <!-- Delivery service information card with icon and text -->
-          <div class="c-services__card l-my-1 l-p-1">
-            <img class="c-services__icon" src="images/delivery-icon.png" alt="An icon showing a link from store to house">
-            <p class="c-services__name u-subheading l-pb-1"><a class="c-services__link u-subheading u-primary-font" href="coming-soon.html">Delivery</a></p>
-            <p class="c-services__overview u-body text-width">
-              Efficient delivery service to bring your garden dreams home.
-            </p>
-          </div>
-          <!-- Workshop services information card with icon and text -->
-          <div class="c-services__card l-my-1 l-p-1">
-            <img class="c-services__icon" src="images/workshop-calendar.png" alt="Workshop Calendar icon in forest green outline">
-            <p class="c-services__name u-subheading l-pb-1"><a class="c-services__link u-subheading u-primary-font" href="coming-soon.html">
-              Workshop Calendar</a>
-            </p>
-            <p class="c-services__overview u-body text-width">
-              Elevate your gardening prowess with our workshops, conveniently booked through our user-friendly calendar system.
-            </p>
-          </div>
-        </div>
-        <div
-          class="c-services__card-wrapper l-flex l-flex-column l-flex-space-between l-mt-1"
-        >
-          <!-- Post-purchase Care services information card with icon and text -->
-          <div class="c-services__card l-my-1 l-p-1">
-            <img class="c-services__icon" src="images/post-purchase-care-icon.png" alt="An icon with a hand and a plant">
-            <p class="c-services__name u-subheading l-pb-1"><a class="c-services__link u-subheading u-primary-font" href="coming-soon.html">
-              Post-purchase Care</a>
-            </p>
-            <p class="c-services__overview u-body text-width">
-              Elevate your plant care experience with our expert guidance and support after purchase.
-            </p>
-          </div>
-          <!-- Green Guidance Hub services information card with icon and text -->
-          <div class="c-services__card l-my-1 l-p-1">
-            <img class="c-services__icon" src="images/green-guidance-hub-icon.png" alt="An icon with 2 people talking in forest green outline">            
-            <p class="c-services__name u-subheading l-pb-1"><a class="c-services__link u-subheading u-primary-font" href="coming-soon.html">
-              Green Guidance Hub</a>
-            </p>
-            <p class="c-services__overview u-body text-width">
-              Your go-to resource for insightful blog posts and handpicked plant
-              recommendations.
-            </p>
-          </div>
-        </div>
+      <p class="c-sidebar__menu-category">Components</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="cards.html">12 Cards</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="forms.html">13 Forms</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="accordion.html">14 Accordion</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="lists.html">15 Lists</a></li>
+        <br>
+      </ul>
+    </nav>
+  </aside>
+  <main class="c-content-box l-mr-1 max-width-mobile">
+    
+    <!-- Main content starts here -->
 
-        <!-- CTA button to Services section of Our Offerings -->
-        <a
-          class="c-services__cta-link u-primary-cta-bgcolor u-primary-cta-font u-button l-mt-1 l-p-1"
-          href="coming-soon.html"
-          >Experience Convenience and Care</a
-        >
-      </section>
 
-      <!-- Seasonal Delights Section -->
-      <section
-        class="c-seasonal center-content l-flex l-flex-column l-flex-center-items l-my-2 l-pt-1"
-      >
-        <h2 class="c-seasonal__heading u-h2 l-mb-1-5 l-mt-3-5">Seasonal Delights</h2>
-        <!-- Seasonal Delights card with img and text -->
-        <div class="c-seasonal__card l-flex l-flex-column l-mb-1-5">
-          <img class="c-seasonal__img" src="images/decorative-pots.jpg" alt=" decorative pots">
+    <section class="c-home u-ff-sans-serif ">
+      <div class="c-home__wrapper l-flex l-flex-column u-primary-font text-width">
+        <!-- Mobile view heading -->
+        <h1 class="c-home__heading u-primary-font u-h1 l-my-2 is-desktop-hidden">Welcome <br> to the <br> Outback Nursery Design System</h1>
+        <!-- Desktop view heading -->
+        <h1 class="c-home__heading u-primary-font u-h1 l-my-2  is-mobile-hidden is-desktop-visible">Welcome to the Outback Nursery Design System</h1>
 
-          <!-- Accordion is coded with https://codepen.io/bellfym/pen/xxBBNYM with modifications -->
-          <div class="c-seasonal__accordion-wrapper l-flex l-flex-column l-mt-1-25 center-content">
-            <!-- Offerings -->
-            <div class="c-seasonal__accordion l-mx-1">
-              <button class="c-seasonal__accordion-header u-primary-font u-body l-p-1-25">
-                <span class="c-seasonal__accordion-name u-letter-spacing-4 u-subheading">Offerings</span>
-                <span class="c-seasonal__accordion-icon"> &#9660;</span>
-              </button>
-              <div class="c-seasonal__accordion-body l-px-1 l-py-1">
-                <p class="c-seasonal__accordion-text text-width">
-                  NEW! Decorative pots, stepping stones, birdbaths, benches and
-                  garden ornaments/statuary
-                </p>
-              </div>
-            </div>
-            <!-- Gift Certificates -->
-            <div class="c-seasonal__accordion l-mx-1">
-              <button class="c-seasonal__accordion-header u-primary-font u-body l-p-1-25">
-                <span class="c-seasonal__accordion-name u-letter-spacing-4 u-subheading">Gift Certificates</span>
-                <span class="c-seasonal__accordion-icon"> &#9660;</span>
-              </button>
-              <div class="c-seasonal__accordion-body c-seasonal__accordion--active l-px-1 l-py-1">
-                <p class="c-seasonal__accordion-text text-width">
-                  1. Contact info@outbacknursery.ca via email.
-                </p>
-                <p class="c-seasonal__accordion-text text-width">
-                  2. Submit an e-transfer to info@outbacknursery.ca with your
-                  desired amount.
-                </p>
-                <p class="c-seasonal__accordion-text text-width">
-                  3. Upon receipt of the e-transfer, we'll promptly send you a
-                  voucher via email or to an alternative address of your
-                  preference..
-                </p>
-              </div>
-            </div>
-            <!-- Peak Season Plants -->
-            <div class="c-seasonal__accordion l-px-1">
-              <button class="c-seasonal__accordion-header u-primary-font u-body l-p-1-25">
-                <span class="c-seasonal__accordion-name u-letter-spacing-4 u-subheading">Peak Season Plants</span>
-                <span class="c-seasonal__accordion-icon"> &#9660;</span>
-              </button>
-              <div class="c_seasonal__accordion-body l-px-1 l-py-1">
-                <p class="c-seasonal__accordion-text text-width">
-                  The peak period for fruit trees spans from mid-March to
-                  mid-April.
-                </p>
-                <p class="c-seasonal__accordion-text text-width">
-                  Optimal hedging seasons occur in April and September, ideal for selecting trees from our farm.
-                </p>
-              </div>
-            </div> 
-          </div>
-        </div>
-
-        <!-- CTA button to Seasonal Delights section of Our Offerings -->
-        <a
-          class="c-seasonal__cta-link u-primary-cta-bgcolor u-primary-cta-font u-button l-mt-1 l-p-1"
-          href="coming-soon.html"
-          >Grab Them Now</a
-        >
-      </section>
-
-      <!-- Branch Out With Us Section -->
-      <section
-        class="c-branch-out center-content l-flex l-flex-column center-content l-my-2 l-pt-1"
-      >
-        <h2 class="c-branch-out__blog-heading u-h2 l-mb-1-5 l-mt-3-5">
-          Branch Out With Us
-        </h2>
-        <p class="c-branch-out__blog-intro u-subheading">
-          Your inspiration to cultivate lush landscapes and thriving gardens.
+        <p class="c-home__intro u-secondary-font">Greetings, designers and developers! Welcome to the Outback Nursery Design System, your comprehensive toolkit for crafting digital and graphic design products that encapsulate the essence of Outback Nursery's natural beauty and charm. Whether you're embarking on the creation of a website, app, or marketing materials for the nursery, this design system is your go-to resource for seamless integration and consistent results.
         </p>
-        <p class="c-branch-out__blog-intro u-subheading l-mt-1">
-          Check out this week's top 3 articles.
-        </p>
-
-        <div
-          class="c-branch-out__blog-card-wrapper l-my-1 l-flex l-flex-column l-flex-space-around"
-        >
-          <!-- Card for blogpost #1 -->
-          <div
-            class="c-branch-out__blog-card l-my-1 l-flex l-flex-column  l-p-1"
-          >
-            <img class="c-branch-out__blog-img" src="images/all-gold-japanese-forest-grass.jpg" alt="Potted All Gold Japanese Forest Grass">
-            <div class="c-branch-out__blog-overview l-flex l-flex-column">
-              <a class="c-branch-out__blog-name u-subheading u-primary-font l-my-1" href="coming-soon.html">
-                Best 10 Ornamental <br> Grass Varieties
-              </a>
-              <p class="c-branch-out__blog-overview u-body">
-                Discover the beauty of ornamental grasses, enhancing your
-                garden's aesthetic appeal.
-              </p>
-            </div>
-          </div>
-          <!-- Card for blogpost #2 -->
-          <div
-            class="c-branch-out__blog-card l-my-1 l-flex l-flex-column l-p-1">
-            <img class="c-branch-out__blog-img" src="images/dwarf-conifers.jpg" alt="Three potted dwarf conifers">
-            <div class="c-branch-out__blog-overview l-flex l-flex-column">
-              <a class="c-branch-out__blog-name u-subheading u-primary-font l-my-1" href="coming-soon.html">
-                Best 10 Dwarf Conifers
-              </a>
-              <p class="c-branch-out__blog-overview u-body">
-                Discover the best 10 compact conifers for your garden. Petite
-                Beauties for Your Garden Haven
-              </p>
-            </div>
-          </div>
-          <!-- Card for blogpost #3 -->
-          <div
-            class="c-branch-out__blog-card l-my-1 l-flex l-flex-column l-p-1"
-          >
-            <img class="c-branch-out__blog-img" src="images/flowering-deciduous.jpg" alt="Flowering deciduous tree">
-            <div class="c-branch-out__blog-overview l-flex l-flex-column">
-              <a class="c-branch-out__blog-name u-subheading u-primary-font l-my-1" href="coming-soon.html">
-                Best 10 Flowering Deciduous Trees
-              </a>
-              <p class="c-branch-out__blog-overview u-body">
-                Explore the finest selection of deciduous trees to add charm to
-                your garden.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- CTA button to Green Tips blogpage -->
-        <a
-          class="c-branch-out__blog-cta-link u-primary-cta-bgcolor u-primary-cta-font u-button l-mt-1 l-p-1"
-          href="coming-soon.html"
-          >Browse To Dig Deeper</a
-        >
-      </section>
-
-      <!-- See What Others Are Saying Section / TESTIMONIALS -->
-      <section
-        class="c-testimonials center-content l-flex l-flex-column l-flex-center-items l-my-2 l-pt-1"
-      >
-        <h2 class="c-testimonials__heading u-h2 l-mb-1-5 l-mt-3-5">
-          See What Others Are Saying
-        </h2>
-        <div class="c-testimonials__wrapper">
-          <div
-            class="c-testimonials__content-slide c-testimonials__content-slide--active"
-          >
-            <div class="c-testimonials__content center-content l-my-2 l-p-1">
-              <img class="c-testimonials__avatar l-mb-2" src="images/testimonials-avatar-sarah.jpg" alt="woman holding a potted plant">
-              <p class="c-testimonials__quote">&#8220;</p>
-              <p class="c-testimonials__text text-width u-primary-font u-body l-mb-1-5">
-                We're thrilled with the outstanding service and top-quality
-                plants from Outback Nursery. The staff's expertise and the
-                health of our garden's new additions surpassed our expectations.
-                Highly recommended!
-              </p>
-              <p class="c-testimonials__name u-primary-font u-fw-bold">Sarah</p>
-            </div>
-          </div>
-          <div class="c-testimonials__content-slide">
-            <div class="c-testimonials__content center-content l-my-2  l-p-1">
-              <img class="c-testimonials__avatar l-mb-2" src="images/testimonials-avatar-zen.jpg" alt="woman with bandana">
-              <p class="c-testimonials__quote">&#8220;</p>
-              <p class="c-testimonials__text text-width u-primary-font u-body l-mb-1-5">
-                Outback Nursery &amp; Garden Centre has transformed my
-                landscaping projects with their top-quality plants and
-                exceptional service. Their expertise and reliability have made
-                them my go-to supplier, ensuring stunning results and satisfied
-                clients every time.
-              </p>
-              <p class="c-testimonials__name u-primary-font u-fw-bold">Zen</p>
-            </div>
-          </div>
-          <div class="c-testimonials__content-slide">
-            <div class="c-testimonials__content center-content l-my-2 l-p-1">
-              <img class="c-testimonials__avatar l-mb-2" src="images/testimonials-avatar-mark.jpg" alt="side view of a man">
-              <p class="c-testimonials__quote">&#8220;</p>
-              <p class="c-testimonials__text text-width u-primary-font u-body l-mb-1-5">
-                Outback Nursery &amp; Garden Centre is my sanctuary for
-                inspiration! With their diverse plant offerings and expert
-                advice, sourcing for my interior designs is an absolute delight.
-              </p>
-              <p class="c-testimonials__name u-primary-font u-fw-bold">Mark</p>
-            </div>
-          </div>
-          <div class="c-testimonials__content-slide">
-            <div class="c-testimonials__content center-content l-my-2 l-p-1">
-              <img class="c-testimonials__avatar l-mb-2" src="images/testimonials-avatar-elon.jpg" alt="man holding a potted plant">
-              <p class="c-testimonials__quote">&#8220;</p>
-              <p class="c-testimonials__text text-width u-primary-font u-body l-mb-1-5">
-                At Outback Nursery, I've found more than just a supplier – I've
-                found a partner in my journey towards sustainable design. Their
-                eco-conscious ethos and stunning selection make them an integral
-                part of my design process
-              </p>
-              <p class="c-testimonials__name u-primary-font u-fw-bold">Elon</p>
-            </div>
-          </div>
-          <div
-            class="c-testimonials__page-indicator l-flex l-flex-center center-content"
-          >
-            <span
-              class="c-testimonials__page c-testimonials__page--active"
-            ></span>
-            <span class="c-testimonials__page"></span>
-            <span class="c-testimonials__page"></span>
-            <span class="c-testimonials__page"></span>
-          </div>
-          <div class="c-testimonials__left-arrow-wrap">
-            <div class="c-testimonials__left-arrow"></div>
-          </div>
-          <div class="c-testimonials__right-arrow-wrap">
-            <div class="c-testimonials__right-arrow"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Harnessing Nature's Beauty /ABOUT US Section -->
-      <section class="c-journey center-content l-my-2 l-pt-1">
-        <h2 class="c-journey__heading u-h2 l-mb-1-5 l-mt-3-5">
-          Harnessing Nature's Beauty
-        </h2>
-        <div
-          class="c-journey__about-us-wrapper l-flex l-flex-column l-flex-center-content"
-        >
-          <iframe
-            class="c-journey__map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2577.8069043282458!2d-125.0534780236795!3d49.75207693740211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548810dcfbd232dd%3A0x8790393154738312!2s6016%20Headquarters%20Rd%2C%20Courtenay%2C%20BC%20V9J%201M7!5e0!3m2!1sen!2sca!4v1712211139057!5m2!1sen!2sca"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <div
-            class="c-journey__content l-flex l-flex-column l-flex-center-self l-my-1-25"
-          >
-            <p class="c-journey__text text-width u-letter-spacing-3">
-              Step into our story and immerse yourself in the enchanting tale of how we cultivate and cherish the wonders of nature.
-            </p>
-            <a
-              class="c-journey__cta-link l-flex-center-self u-primary-cta-bgcolor u-primary-cta-font u-button l-mt-1 l-p-1"
-              href="coming-soon.html"
-              >Discover Our Roots</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- Newsletter Section -->
-      <section class="c-newsletter center-content l-my-2 l-pt-1">
-        <h2 class="c-newsletter__heading u-h2 l-mb-1-5 l-mt-3-5">Explore and Spread</h2>
-        <h3 class="c-newsletter__intro u-h3 l-py-1">
-          The Outback Nursery Newsletter
-        </h3>
-
-        <!-- Below is from Codepen by Claire Guiot -->
-        <form
-          class="c-newsletter__form l-flex l-flex-column l-flex-center-items l-mt-1-25"
-          method="post"
-          action="https://learndigital.dev/DGL103/dgl103-form.php"
-        >
-          <div class="c-newsletter__label-wrapper l-flex l-flex-column">
-            <label for="fname" class="c-newsletter__label l-flex-start-self">First Name</label>
-            <input class="c-newsletter__input l-p-1" type="text" id="fname" name="firstname" placeholder="Ex: Mary">
-          </div>
-          <div class="c-newsletter__label-wrapper l-flex l-flex-column">
-            <label for="email" class="c-newsletter__label l-flex-start-self">Email Address<span class="c-newsletter__label-required">* (required)</span></label>
-            <input
-              class="c-newsletter__input l-p-1" type="email" id="email" name="email" placeholder="Ex: mary@gmail.com" required>
-          </div>
-              <input
-            class="c-newsletter__submit u-primary-cta-bgcolor u-primary-cta-font u-button l-mt-1-25 l-p-1 u-letter-spacing-4" type="submit" value="Submit">
-        </form>
-        <p class="c-newsletter__privacy-note l-my-1">
-          Your privacy matters: we ensure your email stays secure.
-        </p>
-      </section>
-    </main>
-
-    <!-- Footer section -->
-    <footer
-      class="c-footer l-mb-2 l-pt-1 l-flex l-flex-column center-content l-flex-center-items max-width-mobile  l-my-2 l-pt-1"
-    >
-      <img class="c-footer__logo" src="images/outback-nursery-logo.png" alt="Outback Nursery & Garden Centre logo">
-
-      <!-- Footer Columns Wrapper -->
-      <div
-        class="c-footer__columns-wrapper l-flex l-flex-column l-flex-space-around l-my-1 u-primary-font"
-      >
-        <!-- Our Offerings Column -->
-        <div
-          class="c-footer__column l-flex l-flex-column l-flex-center-items l-my-1"
-        >
-          <h4 class="c-footer__col-heading">Our Offerings</h4>
-          <nav
-            class="c-footer__col-links l-flex l-flex-column l-flex-center-items"
-          >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Our Products</a
-            >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Garden Oasis Essentials</a
-            >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Our Services</a
-            >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Seasonal Delights</a
-            >
-          </nav>
-        </div>
-        <!-- Green Tips Column -->
-        <div
-          class="c-footer__column l-flex l-flex-column l-flex-center-items l-my-1"
-        >
-          <h4 class="c-footer__col-heading">Green Tips</h4>
-          <nav
-            class="c-footer__col-links l-flex l-flex-column l-flex-center-items"
-          >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Planting Guide</a
-            >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Foliage Favourites</a
-            >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Favourite Websites</a
-            >
-          </nav>
-        </div>
-        <!-- Our Journey Column -->
-        <div
-          class="c-footer__column l-flex l-flex-column l-flex-center-items l-my-1"
-        >
-          <h4 class="c-footer__col-heading">Our Journey</h4>
-          <nav
-            class="c-footer__col-links l-flex l-flex-column l-flex-center-items"
-          >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Our Story</a
-            >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Our Roots</a
-            >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Our Team</a
-            >
-            <a
-              class="c-footer__col-link-items c-footer__col-link-items--hover u-navlinks"
-              href="coming-soon.html"
-              >Green Guidance Hub</a
-            >
-          </nav>
-        </div>
-        <!-- Contact Us Column -->
-        <div
-          class="c-footer__column l-flex l-flex-column l-flex-center-items l-my-1"
-        >
-          <h4 class="c-footer__col-heading">Stay In Touch</h4>
-          <address
-            class="c-footer__contact-info l-flex l-flex-column l-flex-center-items"
-          >
-            <a
-              class="c-footer__email c-footer__email--hover u-navlinks"
-              href="mailto:info@outbacknursery.ca"
-              >info@outbacknursery.ca</a
-            >
-            <a class="c-footer__phone is-on-desktop-hidden u-navlinks" href="tel:+12503343532">(250) 334-3532</a>
-            <p class="c-footer__phone is-on-mobile-hidden is-on-desktop-visible">(250) 334-3532</p>
-            <p class="c-footer__location">6016 Headquarters Rd,</p>
-            <p class="c-footer__location">Courtenay, BC V9J 1M7</p>
-          </address>
-        </div>
-        <!-- Social Links -->
-        <div
-          class="c-footer__column l-flex l-flex-column l-flex-center-items l-my-1"
-        >
-          <h4 class="c-footer__col-heading">Join Us on Our Journey</h4>
-          <a
-            class="c-footer__socials c-footer__socials--hover u-subheading u-primary-font"
-            href="https://www.facebook.com/profile.php?id=100045470087619"
-            ><i class="fa fa-facebook" aria-hidden="true"></i
-          ></a>
-          <a
-            class="c-footer__socials c-footer__socials--hover u-subheading u-primary-font"
-            href="https://www.instagram.com/outbacknursery/?hl=en"
-            ><i class="fa fa-instagram" aria-hidden="true"></i
-          ></a>
-        </div>
       </div>
-    </footer>
-    <script src="main.js"></script>
-  </body>
+
+      <div class="c-home__wrapper l-flex l-flex-column u-primary-font text-width">
+        <h2 class="c-home__heading u-primary-font u-h2 l-mt-3-5 l-mb-1-5">What's Inside</h2>
+          <ol class="c-home__ordered-list-content l-ml-1">
+            <li class="c-home__list">
+              <p class="c-home__text l-my-1"><strong>Documentation Website:</strong> Dive into our comprehensive documentation website, your gateway to understanding and utilizing every facet of the Outback Nursery Design System. Here, you'll find guidelines for implementing the system across various digital and graphic design projects. Each aspect of the system, from colors to components to spacing, has its dedicated page, ensuring clarity and ease of use. Simply apply the provided classes from our documentation to HTML elements, and watch your designs come to life.</p>
+            </li>
+            <li class="c-home__list">
+              <p class="c-home__text l-my-1"><strong>GitHub Repository:</strong> Access the comprehensive GitHub repository housing the Outback Nursery Design System's CSS sheet. This repository serves as a centralized hub for developers and designers, offering easy access to the latest version of the CSS framework. Simply clone or fork the repository to incorporate the design system seamlessly into your projects.
+              </p>
+            </li>
+            <li class="c-home__list">
+              <p class="c-home__text l-my-1"><strong>Demo Site:</strong> Explore the demo site, where you can witness firsthand how each part of the design system integrates into real-world contexts. From effective color palettes to versatile components, experience Outback Nursery's design system in action, sparking inspiration for your own projects.</p>
+            </li>
+            <li>
+              <p class="c-home__text l-my-1"><strong>About Me:</strong> Meet the mind behind the Outback Nursery Design System. This page provides insights into the creator of this toolkit.</p>
+            </li>
+          </ol>
+      </div>
+
+      <div class="c-home__wrapper l-flex l-flex-column u-primary-font center-content text-width">
+        <h2 class="c-home__heading u-primary-font u-h2 l-mt-3-5 l-mb-1-5">Why Choose Outback Nursery Design System</h2>
+        <ul class="c-home__unordered-list-content l-ml-1">
+          <li class="c-home__list">
+            <p class="c-home__text l-my-1"><strong>Authenticity:</strong> Rooted in the natural beauty and charm of Outback Nursery, the design system offers a genuine reflection of the brand identity and values.
+            </p>
+          </li>
+          <li class="c-home__list">
+            <p class="c-home__text l-my-1"><strong>Efficiency:</strong> With clear documentation, downloadable CSS, and a demo site for reference, streamline your design and development process with ease and efficiency.
+            </p>
+          </li>
+          <li class="c-home__list">
+            <p class="c-home__text l-my-1"><strong>Versatility:</strong> Whether you're designing a website, mobile app, or promotional materials, the design system offers versatility and adaptability to suit your unique needs and preferences.
+            </p>
+          </li>
+        </ul>
+        <!-- Mobile view -->
+        <p class="c-home__text l-my-1">Let's bring the beauty of the outdoors to the digital realm, one pixel at a time. <br>Happy designing!
+        </p>
+      </div> 
+    </section>
+
+
+  </main>
+  <footer class="c-footer u-primary-bgcolor">
+
+  </footer>
+</body>
 </html>
