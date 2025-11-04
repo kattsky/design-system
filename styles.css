@@ -1,0 +1,678 @@
+/* =================== */
+/*  Color Variables    */
+/* =================== */
+
+:root {
+  /* Color description from https://www.colorhexa.com/ */
+
+  /* Primary color */
+    --clr-primary-font-color: #01364A; /* Prussian blue */
+    --clr-primary-bgcolor: #F8FEFA; /* Feta */
+    --clr-primary-accent-bgcolor:  #219d3d; /* Forest Green */
+    --clr-primary-accent-font: #fff; /* White */
+
+  /* Secondary color */
+    --clr-secondary-font-color: #475C6C; /* Fiord */
+    --clr-secondary-bgcolor-smoke: #F9F9F9; /* White smoke */
+  
+  
+  /* Tonal variation */
+  --clr-primary-font-color-100: #e8f9ff; /* Alice blue */
+
+  /* Font family */
+  --ff-sans-serif: "Montserrat", sans-serif;
+
+  /* Font weight */
+  --fw-300-light: 300;
+  --fw-400-reg: 400;
+  --fw-500-med: 500;
+  --fw-600-semibold: 600;
+  --fw-700-bold: 700;
+  --fw-800-exrabold: 800;
+  --fw-900-black: 900;
+
+  /* Font weight italics */
+  --fw-300-italic-light: 300;
+  --fw-400-italic-reg: 400;
+  --fw-500-italic-med: 500;
+  --fw-600-italic-semibold: 600;
+  
+  /* Font sizes */
+  --fs-button: 0.875rem;
+  --fs-caption: 0.75rem;
+  --fs-body: 1rem;
+  --fs-subheading: 1.25rem;
+  --fs-h6: 1.5rem;
+  --fs-h5: 1.75rem;
+  --fs-h4: 2rem;
+  --fs-h3: 2.125rem;
+  --fs-h2: 2.5rem;
+  --fs-h1: 3rem;
+  }
+
+/*  ==================
+        CSS Reset 
+    ==================  */
+
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset margin for the following elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* Remove padding from lists */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Set line-height for body text */
+body {
+  line-height: 1.5rem;
+}
+
+/*  ==================
+      Utility Classes 
+    ==================  */
+
+
+/* Colors */
+.u-primary-font {
+  color: var(--clr-primary-font-color);
+}
+
+.u-primary-font-swatch {
+  background-color: var(--clr-primary-font-color);
+}
+
+.u-primary-bgcolor {
+  background-color: var(--clr-primary-bgcolor);
+}
+
+.u-primary-cta-bgcolor {
+  background-color: var(--clr-primary-accent-bgcolor);
+}
+
+.u-primary-cta-font {
+  color: var(--clr-primary-accent-font);
+}
+
+.u-accent-swatch {
+  background-color: var(--clr-primary-accent-font);
+}
+
+.u-secondary-font {
+  color: var(--clr-secondary-font-color);
+}
+
+.u-secondary-font-swatch {
+  background-color: var(--clr-secondary-font-color);
+}
+
+.u-secondary-bgcolor-smoke {
+  background-color: var(--clr-secondary-bgcolor-smoke);
+}
+
+.u-secondary-bgcolor-blue {
+  background-color: var(--clr-primary-font-color);
+}
+
+.u-text-on-prussian {
+  color: var(--clr-primary-font-color-100);
+}
+
+.u-blue-text-swatch {
+  background-color: var(--clr-primary-font-color-100);
+}
+
+/* Typography */
+.u-ff-sans-serif { font-family: var(--ff-sans-serif); }
+
+.u-fs-button { font-size: var(--fs-button); } 
+.u-fs-data { font-size: var(--fs-button); } 
+.u-fs-caption { font-size: var(--fs-caption); } 
+.u-fs-body { font-size: var(--fs-body); } 
+.u-fs-subheading { font-size: var(--fs-subheading); } 
+.u-fs-h6 { font-size: var(--fs-h6); } 
+.u-fs-h5 { font-size: var(--fs-h5); } 
+.u-fs-h4 { font-size: var(--fs-h4); } 
+.u-fs-h3 { font-size: var(--fs-h3); } 
+.u-fs-h2 { font-size: var(--fs-h2); } 
+.u-fs-h1 { font-size: var(--fs-h1); } 
+
+.u-fw-light { font-weight: var(--fw-300-light); }
+.u-fw-reg { font-weight: var(--fw-400-reg); }
+.u-fw-med { font-weight: var(--fw-500-med); }
+.u-fw-semibold { font-weight: var(--fw-600-semibold); }
+.u-fw-bold { font-weight: var(--fw-700-bold); }
+.u-fw-extrabold { font-weight: var(--fw-800-exrabold); }
+.u-fw-black { font-weight: var(--fw-900-black); }
+
+.u-fw-italic-light { 
+  font-weight: var(--fw-300-italic-light); 
+  font-style: italic;
+}
+.u-fw-italic-reg { 
+  font-weight: var(--fw-400-italic-reg); 
+  font-style: italic;
+}
+.u-fw-italic-med { 
+  font-weight: var(--fw-500-italic-med); 
+  font-style: italic;
+}
+.u-fw-italic-semibold { 
+  font-weight: var(--fw-600-italic-semibold); 
+  font-style: italic;
+}
+
+.u-letter-spacing-1 { letter-spacing: 0.8px; }
+.u-letter-spacing-2 { letter-spacing: 0.48px; }
+.u-letter-spacing-3 { letter-spacing: 0.64px; }
+.u-letter-spacing-4 { letter-spacing: 2.5px; }
+
+.u-h1 {	
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-800-exrabold);
+  letter-spacing: 0.8px;
+  line-height: 3rem;
+  }
+  
+.u-h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-600-semibold);
+  letter-spacing: 0.64px;
+  line-height: 3rem;
+  }
+  
+.u-h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-500-med);
+  letter-spacing: 0.64px;
+  line-height: 3rem;
+  }
+  
+.u-h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-500-med);
+  letter-spacing: 0.64px;
+  }
+
+.u-h5 {
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-500-med);
+  letter-spacing: 0.64px;
+  }
+  
+.u-h6 {
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-500-med);
+  letter-spacing: 0.64px;
+  }
+  
+.u-subheading {
+  font-size: var(--fs-subheading);
+  font-weight: var(--fw-500-med);
+  letter-spacing: 0.64px;
+  }
+
+.u-body {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-400-reg);
+  letter-spacing: 0.48px;
+  }
+
+.u-caption {
+    font-size: var(--fs-caption);
+    font-weight: var(--fw-300-light);
+    letter-spacing: 0.48px;
+    }
+
+.u-button {
+    font-size: var(--fs-button);
+    font-weight: var(--fw-400-reg);
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    }
+  
+.u-navlinks { 
+  font-size: var(--fs-body);
+  font-weight: var(--fw-400-reg);
+  letter-spacing: 0.35px;
+  text-decoration: none;
+  color: var(--clr-primary-font-color);
+  }
+  
+.u-uppercase { text-transform: uppercase; }
+  
+/* Margins */
+
+/* Apply 1rem margin using below utility classes */
+.l-m-1 {
+  margin: 1rem; /* 16px */
+}
+
+.l-mt-1 {
+  margin-top: 1rem; /* 16px */
+}
+
+.l-mb-1 {
+  margin-bottom: 1rem; /* 16px */
+}
+
+.l-ml-1 {
+  margin-left: 1rem; /* 16px */
+}
+
+.l-mr-1 {
+  margin-right: 1rem; /* 16px */
+}
+
+.l-mx-1 {
+  margin-right: 1rem; /* 16px */
+  margin-left: 1rem; /* 16px */
+}
+
+.l-my-1 {
+  margin-top: 1rem; /* 16px */
+  margin-bottom: 1rem; /* 16px */
+}
+
+/* Apply 1.25rem margin using below utility classes */
+.l-m-1-25 {
+  margin: 1.25rem; /* 20px */
+}
+
+.l-mt-1-25 {
+  margin-top: 1.25rem; /* 20px */
+}
+
+.l-mb-1-25 {
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.l-ml-1-25 {
+  margin-left: 1.25rem; /* 20px */
+}
+
+.l-mr-1-25 {
+  margin-right: 1.25rem; /* 20px */
+}
+
+.l-mx-1-25 {
+  margin-right: 1.25rem; /* 20px */
+  margin-left: 1.25rem; /* 20px */
+}
+
+.l-my-1-25 {
+  margin-top: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+/* Apply 1.5rem margin using below utility classes */
+.l-m-1-5 {
+  margin: 1.5rem; /* 24px */
+}
+
+.l-mt-1-5 {
+  margin-top: 1.5rem; /* 24px */
+}
+
+.l-mb-1-5 {
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.l-ml-1-5 {
+  margin-left: 1.5rem; /* 24px */
+}
+
+.l-mr-1-5 {
+  margin-right: 1.5rem; /* 24px */
+}
+
+.l-mx-1-5 {
+  margin-right: 1.5rem; /* 24px */
+  margin-left: 1.5rem; /* 24px */
+}
+
+.l-my-1-5 {
+  margin-top: 1.5rem; /* 24px */
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+/* Apply 2rem margin using below utility classes */
+.l-m-2 {
+  margin: 2rem; /* 32px */
+}
+
+.l-mt-2 {
+  margin-top: 2rem; /* 32px */
+}
+
+.l-mb-2 {
+  margin-bottom: 2rem; /* 32px */
+}
+
+.l-ml-2 {
+  margin-left: 2rem; /* 32px */
+}
+
+.l-mr-2 {
+  margin-right: 2rem; /* 32px */
+}
+
+.l-mx-2 {
+  margin-right: 2rem; /* 32px */
+  margin-left: 2rem; /* 32px */
+}
+
+.l-my-2 {
+  margin-top: 2rem; /* 32px */
+  margin-bottom: 2rem; /* 32px */
+}
+
+/* Apply 3.5rem margin using below utility classes */
+
+.l-mt-3-5 {
+  /* Specially for headings except h1 */
+  margin-top: 3.5rem; /* 56px */
+}
+
+/* Padding */
+
+/* Apply 1rem padding using below utility classes */
+.l-p-1 {
+  padding: 1rem; /* 16px */
+}
+
+.l-pt-1 {
+  padding-top: 1rem; /* 16px */
+}
+
+.l-pb-1 {
+  padding-bottom: 1rem; /* 16px */
+}
+
+.l-pl-1 {
+  padding-left: 1rem; /* 16px */
+}
+
+.l-pr-1 {
+  padding-right: 1rem; /* 16px */
+}
+
+.l-px-1 {
+  padding-right: 1rem; /* 16px */
+  padding-left: 1rem; /* 16px */
+}
+
+.l-py-1 {
+  padding-top: 1rem; /* 16px */
+  padding-bottom: 1rem; /* 16px */
+}
+
+/* Apply 1.25rem padding using below utility classes */
+.l-p-1-25 {
+  padding: 1.25rem; /* 20px */
+}
+
+.l-pt-1-25 {
+  padding-top: 1.25rem; /* 20px */
+}
+
+.l-pb-1-25 {
+  padding-bottom: 1.25rem; /* 20px */
+}
+
+.l-pl-1-25 {
+  padding-left: 1.25rem; /* 20px */
+}
+
+.l-pr-1-25 {
+  padding-right: 1.25rem; /* 20px */
+}
+
+.l-px-1-25 {
+  padding-right: 1.25rem; /* 20px */
+  padding-left: 1.25rem; /* 20px */
+}
+
+.l-py-1-25 {
+  padding-top: 1.25rem; /* 20px */
+  padding-bottom: 1.25rem; /* 20px */
+}
+
+/* Apply 1.5rem padding using below utility classes */
+.l-p-1-5 {
+  padding: 1.5rem; /* 24px */
+}
+
+.l-pt-1-5 {
+  padding-top: 1.5rem; /* 24px */
+}
+
+.l-pb-1-5 {
+  padding-bottom: 1.5rem; /* 24px */
+}
+
+.l-pl-1-5 {
+  padding-left: 1.5rem; /* 24px */
+}
+
+.l-pr-1-5 {
+  padding-right: 1.5rem; /* 24px */
+}
+
+.l-px-1-5 {
+  padding-right: 1.5rem; /* 24px */
+  padding-left: 1.5rem; /* 24px */
+}
+
+.l-py-1-5 {
+  padding-top: 1.5rem; /* 24px */
+  padding-bottom: 1.5rem; /* 24px */
+}
+
+/* Apply 2rem padding using below utility classes */
+.l-p-2 {
+  padding: 2rem; /* 32px */
+}
+
+.l-pt-2 {
+  padding-top: 2rem; /* 32px */
+}
+
+.l-pb-2 {
+  padding-bottom: 2rem; /* 32px */
+}
+
+.l-pl-2 {
+  padding-left: 2rem; /* 32px */
+}
+
+.l-pr-2 {
+  padding-right: 2rem; /* 32px */
+}
+
+.l-px-2 {
+  padding-right: 2rem; /* 32px */
+  padding-left: 2rem; /* 32px */
+}
+
+.l-py-2 {
+  padding-top: 2rem; /* 32px */
+  padding-bottom: 2rem; /* 32px */
+}
+
+
+
+/* Base Layout Classes using Flexbox and Grid*/
+
+/* Flexbox */
+.l-flex {
+  display: flex;
+}
+
+.l-flex-row {
+  flex-direction: row;
+}
+
+.l-flex-column {
+  flex-direction: column;
+}
+
+.l-flex-space-between {
+  justify-content: space-between;
+}
+
+.l-flex-center {
+  justify-content: center;
+}
+
+.l-flex-space-around {
+  justify-content: space-around;
+}
+
+.l-flex-space-evenly {
+  justify-content: space-evenly;
+}
+
+.l-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.l-flex-row-wrap {
+  flex-flow: row wrap;
+}
+
+.l-flex-center-items {
+  align-items: center;
+}
+
+.l-flex-start-items {
+  align-items: flex-start;
+}
+
+.l-flex-end-items {
+  align-items: flex-end;
+}
+
+.l-flex-center-content {
+  align-content: center;
+}
+
+.l-flex-start-content {
+  align-content: flex-start;
+}
+
+.l-flex-end-content {
+  align-content: flex-end;
+}
+
+.l-flex-center-self {
+  align-self: center;
+} 
+
+.l-flex-start-self {
+  align-self: flex-start;
+} 
+
+.l-flex-end-self {
+  align-self: flex-end;
+} 
+
+/* CSS Grid */
+.l-grid {
+  display: grid;
+}
+
+.l-grid-gap-1 {
+  gap: 1rem; /* 16px */
+}
+
+.l-grid-gap-2 {
+  gap: 2rem; /* 32px */
+}
+
+.l-grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.l-grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.l-grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.l-grid-rows-2 {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.l-grid-rows-3 {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.l-grid-rows-4 {
+  grid-template-rows: repeat(4, 1fr);
+} 
+
+.l-grid-justify-center {  
+  justify-content: center;
+}
+
+.l-grid-align-center {
+  align-items: center;
+}
+
+
+/* Container classes for layout control */
+
+/* Mobile Container - centers container horizontally */
+.max-width-mobile {
+  max-width: 90%;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+/* Full Width Container */
+.full-width-wrapper {
+  width: 100%;
+}
+
+/* Flexbox ruleset: Uses a flex container with horizontal layout,
+   distributing space evenly between items */
+.l-flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Center aligns text and limits its width to 70 characters */
+.text-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
+  }
+
+/* Center content horizontally within its container */
+.center-content { 
+  margin-left: auto;  
+  margin-right: auto; 
+}

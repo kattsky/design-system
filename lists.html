@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Google Font - Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Link to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to design-system.css -->
+    <link rel="stylesheet" href="design-system.css">
+   
+    <title>Design System</title>
+</head>
+<body class="c-body-wrapper u-primary-bgcolor desktop-width">
+    
+<!-- Header section -->
+  <header class="c-top-nav-wrapper u-primary-bgcolor">
+    <!-- Place page title within header tag -->
+    <div class="c-top-nav l-flex-wrapper l-mx-2">
+      <div class="c-top-nav__page-title u-primary-font l-my-2">
+          <span class="c-top-nav__heading-name u-ff-sans-serif u-h1">
+            <a class="c-top-nav__heading-link c-top-nav__heading-link--hover c-top-nav__heading-link--active u-navlinks" href="design-system.html">Design System</a>
+          </span>
+      </div>
+      
+      <!-- Top-level navbar -->
+      <nav class="c-top-nav__menu u-ff-sans-serif l-my-2">
+          <div class="c-top-nav__links is-mobile-hidden is-desktop-visible u-primary-font">        
+              <a class="c-top-nav__link-items c-top-nav__link-items--hover c-top-nav__link-items--active u-navlinks" href="about-me.html">About Me</a>
+              <a class="c-top-nav__link-items c-top-nav__link-items--hover c-top-nav__link-items--active u-navlinks" href="index.html">Demo Site</a>
+          </div> 
+      </nav>
+  </div>
+  </header>
+
+    <!-- Vertical sidebar navigation -->
+    <aside class="c-sidebar u-primary-font u-ff-sans-serif">
+      <!-- Mobile navbar using hamburger icon
+      Below div block is sourced from https://edezekiel.medium.com/css-only-responsive-navigation-menu-c36ad02751e8
+      for responsive menu without JS -->
+    <input type="checkbox" id="toggle-side-menu" class="c-sidebar__mobile-toggle is-mobile-hidden">
+    <label for="toggle-side-menu" class="c-sidebar__mobile-toggle-icon is-desktop-hidden"><span class="c-sidebar__mobile-toggle-icon c-sidebar__mobile-toggle-icon--transform"></span></label>
+    <nav class="c-sidebar__menu is-mobile-hidden is-desktop-visible l-ml-2">
+      <ul class="c-sidebar__menu-list">
+          <br>
+          <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="about-me.html">About Me</a></li>
+          <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="index.html">Demo Site</a></li>
+          <br>
+      </ul>
+      <p class="c-sidebar__menu-category">Branding</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="colours.html">01 Colours</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="typography.html">02 Typography</a></li>
+        <br>
+      </ul>
+
+      <p class="c-sidebar__menu-category">Utilities</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="spacing.html">03 Spacing</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="containers.html">04 Containers</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="images.html">05 Images</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="interactive.html">06 Interactive</a></li>
+        <br>
+      </ul>
+
+      <p class="c-sidebar__menu-category">Navigation</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="navbars.html">07 Navbars</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="breadcrumbs.html">08 Breadcrumbs</a></li>
+        <br>
+      </ul>
+
+      <p class="c-sidebar__menu-category">Blocks</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="hero.html">09 Hero</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="carousel.html">10 Carousel</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="footer.html">11 Footer</a></li>
+        <br>
+      </ul>
+
+      <p class="c-sidebar__menu-category">Components</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="cards.html">12 Cards</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="forms.html">13 Forms</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="accordion.html">14 Accordion</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--current u-navlinks" href="lists.html">15 Lists</a></li>
+        <br>
+      </ul>
+    </nav>
+  </aside>
+  <main class="c-content-box l-mr-1 u-primary-font max-width-mobile u-ff-sans-serif">
+    
+    <!-- Main content starts here -->
+
+    <section class="c-design text-width">
+      <h1 class="c-design__heading u-h1 l-my-2">Lists</h1>
+      <p class="c-design__overview u-secondary-font">Lists offer a structured and organized format for presenting information on websites. From navigation menus to product listings, lists provide a clear and concise way to showcase content. Combining lists with pagination functionality using JavaScript enhances website usability. By breaking down content into manageable chunks and allowing users to navigate through pages effortlessly, this approach ensures an optimal browsing experience, particularly for large datasets such as product listings.</p>
+      <div class="c-design-wrapper center-content l-p-1 l-mt-2">
+        <p class="c-design__intro u-subheading l-mb-2">Illustration of a List Implementation</p>
+
+        <div class="c-category__overview u-body l-my-2 center-content">
+          <!-- For tabs -->
+          <!-- Pagination is coded with https://codepen.io/josetxu/pen/vYvgJVE with modifications -->
+          <div class="c-category__tabs">
+            <ul class="c-category__list l-flex l-flex-row">
+              <li class="c-category__list-item c-category__list-item--active l-p-1"><span>Conifers</span></li>
+              <li class="c-category__list-item l-p-1"><span>Deciduous Trees</span></li>
+              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Evergreen Trees</span></li>
+              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Grasses &amp; Bamboos</span></li>
+              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Vines</span></li>
+              <li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"><span>Edibles</span></li>
+              <li class="c-category__list-item l-p-1 is-on-desktop-hidden"><span>Expand Your Options</span>
+                <ul class="c-category__drop-down u-primary-bgcolor">
+                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Evergreen Trees</a></li>
+                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Grasses &amp; Bamboos</a></li>
+                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Vines</a></li>
+                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Edibles</a></li>
+                  <li class="c-category__drop-down-option l-p-1"><a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html">Japanese Maples</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+          >
+            <!-- Category information with img and text -->
+            <img class="c-category__img" src="images/spruce.jpg" alt="Potted Spruce Tree">
+            <div class="c-category__text-wrapper l-p-1">
+              <p class="c-category__text l-my-1">
+                Elevate your home's landscape with the timeless beauty and  enduring elegance of conifers.
+              </p>
+              <p class="c-category__text l-my-1">
+                From privacy screening to offering year-round visual interest, these remarkably low-maintenance trees add charm and functionality to your outdoor sanctuary.
+              </p>
+              <p class="c-category__text l-my-1">
+                Conifers bring timeless charm to your landscape with year-round greenery, offering privacy screening and low-maintenance upkeep. Their diverse forms inspire endless landscaping possibilities, while their scent and graceful branches evoke serene wilderness, elevating your outdoor sanctuary to new levels of beauty and tranquility.
+              </p>
+            </div>
+          </div>
+          <div
+            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+          >
+            <!-- Category information with img and text -->
+            <img class="c-category__img" src="images/albizia.jpg" alt="Albizia">
+            <div class="c-category__text-wrapper l-p-1">
+              <p class="c-category__text l-my-1">
+                Enhance your outdoor space with the captivating allure of Deciduous Trees.
+              </p>
+              <p class="c-category__text l-my-1">
+                From vibrant foliage that transforms with the seasons to providing shade and shelter, these trees offer a dynamic and picturesque addition to your landscape.
+              </p>
+              <p class="c-category__text l-my-1">
+                Deciduous trees bring a dynamic rhythm to your outdoor environment, showcasing a kaleidoscope of colors as their foliage transitions with the changing seasons. From the vibrant greens of spring to the fiery hues of autumn, their ever-changing palette offers an enchanting spectacle that invigorates your landscape throughout the year.
+              </p>
+            </div>
+          </div>
+          <div
+            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+          >
+            <!-- Category information with img and text -->
+            <img class="c-category__img" src="images/azalea.jpg" alt="A Beautiful Azalea Plant with Pink Flowers">
+            <div class="c-category__text-wrapper l-p-1">
+              <p class="c-category__text l-my-1">
+                Immerse yourself in the enduring elegance of Evergreen Trees, a cornerstone of any picturesque landscape.
+              </p>
+              <p class="c-category__text l-my-1">
+                Whether used as privacy screens, focal points, or to provide year-round interest, these resilient trees offer both aesthetic appeal and practical functionality.
+              </p>
+              <p class="c-category__text l-my-1">
+                Evergreen trees stand as steadfast guardians, infusing your landscape with enduring elegance and year-round vitality. Their lush foliage remains verdant and vibrant through all seasons, offering a timeless backdrop of greenery that captivates the eye and soothes the soul.
+              </p>
+            </div>
+          </div>
+          <div
+            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+          >
+            <!-- Category information with img and text -->
+            <img class="c-category__img" src="images/carex.jpg" alt="Potted Carex Plant">
+            <div class="c-category__text-wrapper l-p-1">
+              <p class="c-category__text l-my-1">
+                Embrace the natural elegance of Grasses &amp; Bamboos.
+              </p>
+              <p class="c-category__text l-my-1">
+                With their graceful foliage and versatile appeal, these plants bring a touch of serenity and texture to your outdoor haven.
+              </p>
+              <p class="c-category__text l-my-1">
+                Grasses and bamboos offer a harmonious blend of natural elegance and tranquil beauty, enriching your outdoor haven with their graceful foliage and versatile charm. Whether swaying gently in the breeze or standing tall as architectural accents, these plants infuse your landscape with a sense of serenity and texture that captivates the senses.
+              </p>
+            </div>
+          </div>
+          <div
+            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+          >
+            <!-- Category information with img and text -->
+            <img class="c-category__img" src="images/honeysuckle.jpg" alt="Coral Honeysuckle">
+            <div class="c-category__text-wrapper l-p-1">
+              <p class="c-category__text l-my-1">
+                Unleash the beauty of Vines in your outdoor oasis.
+              </p>
+              <p class="c-category__text l-my-1">
+                From gracefully cascading down walls to creating lush natural privacy screens, vines offer endless possibilities for enhancing your outdoor sanctuary and transforming it into a tranquil haven of natural beauty and serenity.
+              </p>
+              <p class="c-category__text l-my-1">
+                Vines weave a tapestry of natural beauty within your outdoor oasis, offering versatile charm and endless possibilities for enhancement. Whether cascading gracefully down walls or weaving intricate patterns as natural privacy screens, these plants add an enchanting touch of whimsy and allure to your outdoor sanctuary.
+              </p>
+            </div>
+          </div>
+          <div
+            class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+          >
+            <!-- Category information with img and text -->
+            <img class="c-category__img" src="images/hazelnut.jpg" alt="Hazelnuts in White Bowl on Cutting Board">
+            <div class="c-category__text-wrapper l-p-1">
+              <p class="c-category__text l-my-1">
+                Indulge in the bounty of Edibles.
+              </p>
+              <p class="c-category__text l-my-1">
+                From the crisp sweetness of apples to the luscious juiciness of pears, and the vibrant burst of cherries and plums, these fruits offer a delightful harvest for your garden.
+              </p>
+              <p class="c-category__text l-my-1">
+                Indulge in the abundance of edibles, where the crisp sweetness of apples, the luscious juiciness of pears, and the vibrant burst of cherries and plums await your harvest. These fruits not only tantalize the taste buds but also add a bountiful array of colors and textures to your garden, creating a feast for both the eyes and the palate.
+              </p>
+            </div>
+          </div>
+        </div>
+      
+
+      </div>
+      <div class="c-design__code-block center-content l-p-1 l-mb-2"> 
+        <p class="c-design__intro u-subheading l-mb-2">HTML Code</p>
+        <pre class="c-design__code-snippet">
+          <code>
+            &lt;div class="c-category__overview u-body l-my-2 center-content"&gt;
+            &lt;!-- For tabs --&gt;
+            &lt;!-- Pagination is coded with https://codepen.io/josetxu/pen/vYvgJVE with modifications --&gt;
+            &lt;div class="c-category__tabs"&gt;
+              &lt;ul class="c-category__list l-flex l-flex-row"&gt;
+                &lt;li class="c-category__list-item c-category__list-item--active l-p-1"&gt;&lt;span&gt;Conifers&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="c-category__list-item l-p-1"&gt;&lt;span&gt;Deciduous Trees&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"&gt;&lt;span&gt;Evergreen Trees&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"&gt;&lt;span&gt;Grasses &amp; Bamboos&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"&gt;&lt;span&gt;Vines&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="c-category__list-item l-p-1 is-on-mobile-hidden is-on-desktop-visible"&gt;&lt;span&gt;Edibles&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="c-category__list-item l-p-1 is-on-desktop-hidden"&gt;&lt;span&gt;Expand Your Options&lt;/span&gt;
+                  &lt;ul class="c-category__drop-down u-primary-bgcolor"&gt;
+                    &lt;li class="c-category__drop-down-option l-p-1"&gt;&lt;a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html"&gt;Evergreen Trees&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="c-category__drop-down-option l-p-1"&gt;&lt;a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html"&gt;Grasses &amp; Bamboos&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="c-category__drop-down-option l-p-1"&gt;&lt;a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html"&gt;Vines&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="c-category__drop-down-option l-p-1"&gt;&lt;a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html"&gt;Edibles&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="c-category__drop-down-option l-p-1"&gt;&lt;a class="c-category__option-link c-category__option-link--hover u-navlinks" href="coming-soon.html"&gt;Japanese Maples&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div
+              class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+            &gt;
+              &lt;!-- Category information with img and text --&gt;
+              &lt;img class="c-category__img" src="images/spruce.jpg" alt="Potted Spruce Tree"&gt;
+              &lt;div class="c-category__text-wrapper l-p-1"&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Elevate your home's landscape with the timeless beauty and  enduring elegance of conifers.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  From privacy screening to offering year-round visual interest, these remarkably low-maintenance trees add charm and functionality to your outdoor sanctuary.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Conifers bring timeless charm to your landscape with year-round greenery, offering privacy screening and low-maintenance upkeep. Their diverse forms inspire endless landscaping possibilities, while their scent and graceful branches evoke serene wilderness, elevating your outdoor sanctuary to new levels of beauty and tranquility.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+            &gt;
+              &lt;!-- Category information with img and text --&gt;
+              &lt;img class="c-category__img" src="images/albizia.jpg" alt="Albizia"&gt;
+              &lt;div class="c-category__text-wrapper l-p-1"&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Enhance your outdoor space with the captivating allure of Deciduous Trees.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  From vibrant foliage that transforms with the seasons to providing shade and shelter, these trees offer a dynamic and picturesque addition to your landscape.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Deciduous trees bring a dynamic rhythm to your outdoor environment, showcasing a kaleidoscope of colors as their foliage transitions with the changing seasons. From the vibrant greens of spring to the fiery hues of autumn, their ever-changing palette offers an enchanting spectacle that invigorates your landscape throughout the year.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+            &gt;
+              &lt;!-- Category information with img and text --&gt;
+              &lt;img class="c-category__img" src="images/azalea.jpg" alt="A Beautiful Azalea Plant with Pink Flowers"&gt;
+              &lt;div class="c-category__text-wrapper l-p-1"&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Immerse yourself in the enduring elegance of Evergreen Trees, a cornerstone of any picturesque landscape.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Whether used as privacy screens, focal points, or to provide year-round interest, these resilient trees offer both aesthetic appeal and practical functionality.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Evergreen trees stand as steadfast guardians, infusing your landscape with enduring elegance and year-round vitality. Their lush foliage remains verdant and vibrant through all seasons, offering a timeless backdrop of greenery that captivates the eye and soothes the soul.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+            &gt;
+              &lt;!-- Category information with img and text --&gt;
+              &lt;img class="c-category__img" src="images/carex.jpg" alt="Potted Carex Plant"&gt;
+              &lt;div class="c-category__text-wrapper l-p-1"&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Embrace the natural elegance of Grasses &amp; Bamboos.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  With their graceful foliage and versatile appeal, these plants bring a touch of serenity and texture to your outdoor haven.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Grasses and bamboos offer a harmonious blend of natural elegance and tranquil beauty, enriching your outdoor haven with their graceful foliage and versatile charm. Whether swaying gently in the breeze or standing tall as architectural accents, these plants infuse your landscape with a sense of serenity and texture that captivates the senses.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+            &gt;
+              &lt;!-- Category information with img and text --&gt;
+              &lt;img class="c-category__img" src="images/honeysuckle.jpg" alt="Coral Honeysuckle"&gt;
+              &lt;div class="c-category__text-wrapper l-p-1"&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Unleash the beauty of Vines in your outdoor oasis.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  From gracefully cascading down walls to creating lush natural privacy screens, vines offer endless possibilities for enhancing your outdoor sanctuary and transforming it into a tranquil haven of natural beauty and serenity.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Vines weave a tapestry of natural beauty within your outdoor oasis, offering versatile charm and endless possibilities for enhancement. Whether cascading gracefully down walls or weaving intricate patterns as natural privacy screens, these plants add an enchanting touch of whimsy and allure to your outdoor sanctuary.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class="c-category__info-wrapper l-flex l-flex-column l-flex-space-between l-flex-center-items l-p-1"
+            &gt;
+              &lt;!-- Category information with img and text --&gt;
+              &lt;img class="c-category__img" src="images/hazelnut.jpg" alt="Hazelnuts in White Bowl on Cutting Board"&gt;
+              &lt;div class="c-category__text-wrapper l-p-1"&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Indulge in the bounty of Edibles.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  From the crisp sweetness of apples to the luscious juiciness of pears, and the vibrant burst of cherries and plums, these fruits offer a delightful harvest for your garden.
+                &lt;/p&gt;
+                &lt;p class="c-category__text l-my-1"&gt;
+                  Indulge in the abundance of edibles, where the crisp sweetness of apples, the luscious juiciness of pears, and the vibrant burst of cherries and plums await your harvest. These fruits not only tantalize the taste buds but also add a bountiful array of colors and textures to your garden, creating a feast for both the eyes and the palate.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;                    
+          </code>
+        </pre>
+      </div>
+    </section>
+  </main>
+  <footer class="c-footer u-primary-bgcolor">
+
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1251 @@
+
+
+/* ================= HEADER SECTION =================*/
+
+/* Hide navigational links and toggle switch element in mobile view*/
+.is-mobile-hidden {
+    display: none;
+}
+
+/* Display  hamburger icon in smaller screens*/
+.c-sidebar__mobile-toggle-icon {
+    top: 1.5rem;
+    right: 1rem;
+    cursor: pointer;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    z-index: 1;
+}
+
+.c-top-nav__heading-link {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-800-exrabold);
+}
+
+/* ================= SIDEBAR SECTION ================= */
+
+/* Display .sidebar__menu when mobile-toggle checkbox is checked 
+Code sourced from https://codepen.io/nobukawa/pen/WvJQwv?editors=1100 
+Replaced + with tilde to select all sibling elements */
+.c-sidebar__mobile-toggle:checked ~ .c-sidebar__menu {
+    display: block;
+  }
+
+/* Lines 40-84 code is sourced from https://codepen.io/andreykrokhin/pen/mGEqja */
+/* Apply transformations to the hamburger icon (using span element) when clicked (checked).
+   At the end of the animation the icon will resemble a close (X) button.
+*/
+.c-sidebar__mobile-toggle:checked ~ .c-sidebar__mobile-toggle-icon > .c-sidebar__mobile-toggle-icon--transform {
+    transform: rotate(45deg);
+
+  }
+.c-sidebar__mobile-toggle:checked ~ .c-sidebar__mobile-toggle-icon > .c-sidebar__mobile-toggle-icon--transform:before {
+    top: 0;
+    transform: rotate(0);
+  }
+.c-sidebar__mobile-toggle:checked ~ .c-sidebar__mobile-toggle-icon > .c-sidebar__mobile-toggle-icon--transform::after  {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+/* 
+   Define styling for the hamburger transformation elements.
+   These elements are used to create animation effects.
+*/
+
+.c-sidebar__mobile-toggle-icon--transform,
+.c-sidebar__mobile-toggle-icon--transform::before,
+.c-sidebar__mobile-toggle-icon--transform::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  --icon-bgcolor: #01364A;
+  background-color: var(--icon-bgcolor);
+
+  transition-duration: .25s;
+}
+
+/* 
+   Define pseudo-elements before and after harmburger transformation for styling.
+   These pseudo-elements are positioned to create additional graphical elements for the overall appearance of the hamburger icon.
+   Using the top property to position two horizontal lines (that forms the close [X] icon when transformed) relative to the main icon to ensure it is aligned.
+*/
+.c-sidebar__mobile-toggle-icon--transform::before {
+  content: '';
+  top: -8px;
+}
+.c-sidebar__mobile-toggle-icon--transform::after {
+  content: '';
+  top: 8px;
+}
+
+/* Remove list item style */
+.c-sidebar__list-item {
+  list-style-type: none;
+}
+
+/* Green color for links in hover state */
+.c-sidebar__list-item--hover:hover,
+.c-top-nav__link-items--hover:hover,
+.c-top-nav__heading-link--hover:hover,
+.c-design__sample-link--hover:hover,
+.c-top-nav__breadcrumb-link:hover {
+    color: var(--clr-primary-accent-bgcolor);
+}
+
+/* Link style for focused active state */
+.c-sidebar__list-item--active:focus,
+.c-top-nav__link-items--active:focus,
+.c-sidebar__list-item--current,
+.c-top-nav__breadcrumb-link:focus {
+    color: var(--clr-primary-accent-bgcolor);
+    font-size: var(--fs-body); 
+    font-weight: var(--fw-800-exrabold);
+     
+}
+.c-top-nav__heading-link--current {
+  color: var(--clr-primary-accent-bgcolor);
+  font-weight: var(--fw-800-exrabold);
+}
+
+/* Sidebar menu category styling */
+.c-sidebar__menu-category { 
+  font-size: var(--fs-body);
+  font-weight: var(--fw-700-bold);
+  letter-spacing: 0.35px;
+  margin-bottom: -15px;
+}
+
+/* ================= HOME PAGE ================= */
+/* Overwrite font size for the home__heading on mobile */
+.c-home__heading {
+  font-size: 2.8rem;
+}
+
+/* ================= COLOURS PAGE =================*/
+
+/* Set line height to browser default */
+.c-swatch__heading {
+  line-height: normal;
+}
+/* Style for swatch card holding the table contrast ratio*/
+.c-swatch__card {
+  border: lightgray 1px solid;
+  border-radius: 10px;
+  padding: 15px;
+  width: 90%;
+}
+/* Style for table swatches */
+.c-swatch__table{
+    margin-top: 10px;
+    width: 300px;
+    padding: 4px;
+}
+
+/* Circular color swatch display */
+.c-swatch__color-display {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Circular color swatch display with border for visibility e.g. in feta bgcolor*/
+.c-swatch__color-display--border {
+    border: 1px solid lightgray;
+}
+
+/* ================= TYPOGRAPHY PAGE =================*/
+
+/* Style tables same as Colours page*/
+.c-typeface__table,
+.c-scaling__table,
+.c-type-weights__rank-table { 
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+/* ================= SPACING PAGE =================*/
+
+/* Style tables same as Colours page*/
+.c-padding__table,
+.c-margin__table {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+
+
+/* ================= CONTAINERS PAGE =================*/
+
+/* Style tables same as Colours and Typography pages*/
+.c-flex__table,
+.c-grid__table,
+.c-width__table {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+/* Set specific width to ensure the 2 columns spread out evenly
+in the table and occupying 100% of its container*/
+.c-width__table {
+  width: 100%;
+}
+/* Center-align text */
+.c-width__examples {
+  text-align: center; 
+}
+
+/* ================= IMAGES PAGE =================*/
+/* Style for circular avatar */
+.c-testimonials__avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Maintain aspect ratio and covers the container without stretching */
+}
+
+/* ================= INTERACTIVE PAGE =================*/
+/* Apply transitions and position relative for pseudo-elements */
+.c-hero__explore-link {
+  border-radius: 10px;
+  transition: ease-out 0.5s;
+  position: relative; /* Add position relative for pseudo-elements */
+}
+/* Position pseudo-elements and set initial dimensions */
+.c-hero__explore-link::after,
+.c-hero__explore-link::before {
+  position: absolute;
+  content: ""; /* Empty content for pseudo-elements */
+  width: 0%;
+  height: 0%;
+  visibility: hidden; /* Hide pseudo-elements by default */
+}
+/* Position and style pseudo-elements for after, setting their dimensions and borders with transition effects */
+.c-hero__explore-link::after {
+  bottom: -2px;
+  right: -2px;
+  border-radius: 10px;
+  border-left: 1px solid var(--clr-primary-accent-bgcolor);
+  border-bottom: 1px solid var(--clr-primary-accent-bgcolor);
+  transition: width .1s, ease .1s,  /* Width transition with delay */
+              height .1s ease,  /* Height transition */
+              visibility 0s .2s;  /* Visibility transition with delay */
+}
+/* Style pseudo-elements before */
+.c-hero__explore-link::before {
+  top: -3px;
+  left: -2px;
+  border-radius: 10px;
+  border-top: 1px solid var(--clr-primary-accent-bgcolor);
+  border-right: 1px solid var(--clr-primary-accent-bgcolor);
+  transition: width .1s ease .3s, /* Width transition with delay */
+              height .1s ease .2s,  /* Height transition with delay */ 
+              visibility 0s .4s;  /* Visibility transition with delay */
+}
+/* Apply hover effect */
+.c-hero__explore-link:hover {
+  animation: pulse 1s ease-out .4s; /* Apply pulse animation on hover */
+  background-color: rgba(33, 157, 61, .8) ;  /* Change background color on hover with opacity*/
+}
+/* Expand pseudo-elements on hover by adjusting their width, height, and visibility with transition effects */
+.c-hero__explore-link:hover::after,
+.c-hero__explore-link:hover::before {
+  width: calc(100% + 3px); /* Set width to 100% of the parent container with 3px added */
+  height: calc(100% + 3px); /* Set height to 100% of the parent container with 3px added */
+  visibility: visible;  /* Set visibility to visible */
+  transition: width .1s ease .2s, height .1s ease .3s, visibility 0s .2s; /* Apply transition effects */
+}
+.c-newsletter__submit:hover {
+  background-color: rgba(33, 157, 61, .8) ;  /* Change background color on hover */
+  transition: ease-out 0.5s;
+  cursor: pointer;
+}
+
+
+/* ================= NAVBAR PAGE =================*/
+
+.c-design-wrapper {
+  border-radius: 10px 10px 0 0;
+  border: lightgray 1px solid;
+}
+
+.c-top-nav-wrap {
+  margin-bottom: 10rem;
+}
+
+/* Adds a box shadow effect to the top navigation container */
+.c-top-nav-wrap {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Set the height and width of the top navigation container and align center*/
+.c-top-nav-bar__sample {
+  width: 80%;
+  height: 120px;
+  margin-left: auto; 
+  margin-right: auto;
+  position: relative;
+}
+
+/* Style the logo image with border effect as default identifier*/
+.c-top-nav__logo-img-on-sample {
+  width: 100px;
+  top: 60px;
+  border: 1px solid var(--clr-primary-font-color);  /* Set the default color of the border around logo */
+  border-radius: 50%;
+  position: absolute; /* Positions the logo absolutely within its container */
+  z-index: 1; /* Set the stacking order of the logo above navbar container */
+}
+
+/* Set the hover effect for the logo image */
+.c-top-nav__logo-img-on-sample:hover {
+  border: 1px solid var(--clr-primary-accent-bgcolor);  /* Set the hover color of the border around logo */
+}
+
+/* Set width to top navigation and align menu to the end of its container */
+.c-top-nav__menu-list-sample {
+  align-self: end;
+  padding-bottom: 1rem; /* Add padding at the bottom of the menu */
+}
+
+/* Style the links with set width and margin added to the right of the of the rightmost link */
+.c-top-nav__links-list-sample {
+  margin-left: 50px;
+}
+
+/* Style each link items with 3rem spacing to the right */
+.c-top-nav__link-item-sample {
+  margin-right: 2rem;
+}
+
+/* Style Chat with us link item as a button */
+.c-top-nav__link-item-sample--button {
+  border-radius: 10px;
+  letter-spacing: 0.35px; /* Set same letter-spacing value as all links */
+  text-decoration: none;
+}
+
+/* Hide navigational links and toggle switch element in mobile view*/
+.is-on-mobile-hidden {
+  display: none;
+}
+
+/* Display  hamburger icon in smaller screens*/
+.c-top-nav__toggle-icon-on {
+  top: 6rem;
+  right: -.5rem;
+  cursor: pointer;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  z-index: 5;
+}
+
+/* Display .c-top-nav__menu-list on the left screen when toggle checkbox is checked 
+Code sourced from https://codepen.io/nobukawa/pen/WvJQwv?editors=1100 
+Replaced + with tilde to select all sibling elements */
+.c-top-nav__toggle:checked ~ .c-top-nav__menu-list-sample .c-top-nav__links-list-sample {
+  display: flex;
+  position: absolute;
+  top: 10.5rem;
+  left: -2rem;
+      padding-left: 2rem;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  line-height: 4rem;
+  background-color: var(--clr-primary-bgcolor);
+  z-index: 4;
+  list-style: none;
+}
+
+/* Lines 28-77 code is sourced from https://codepen.io/andreykrokhin/pen/mGEqja */
+/* Apply transformations to the hamburger icon (using span element) when clicked (checked).
+ At the end of the animation the icon will resemble a close (X) button.
+*/
+.c-top-nav__toggle:checked ~ .c-top-nav__toggle-icon > .c-top-nav__toggle-icon--transform {
+  transform: rotate(45deg);
+
+}
+.c-top-nav__toggle:checked ~ .c-top-nav__toggle-icon > .c-top-nav__toggle-icon--transform:before {
+  top: 0;
+  transform: rotate(0);
+}
+.c-top-nav__toggle:checked ~ .c-top-nav__toggle-icon > .c-top-nav__toggle-icon--transform::after  {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* 
+ Define styling for the hamburger transformation elements.
+ These elements are used to create animation effects.
+*/
+
+.c-top-nav__toggle-icon--transform,
+.c-top-nav__toggle-icon--transform::before,
+.c-top-nav__toggle-icon--transform::after {
+display: block;
+position: absolute;
+
+width: 100%;
+height: 2px;
+
+--icon-bgcolor: #01364A;
+background-color: var(--icon-bgcolor);
+
+transition-duration: .25s;
+}
+
+/* 
+ Define pseudo-elements before and after harmburger transformation for styling.
+ These pseudo-elements are positioned to create additional graphical elements for the overall appearance of the hamburger icon.
+ Using the top property to position two horizontal lines (that forms the close [X] icon when transformed) relative to the main icon to ensure it is aligned.
+*/
+.c-top-nav__toggle-icon--transform::before {
+content: '';
+top: -8px;
+}
+.c-top-nav__toggle-icon--transform::after {
+content: '';
+top: 8px;
+}
+
+/* Remove list item style */
+.c-top-nav__link-item {
+list-style-type: none;
+}
+
+/* Gray color for links in hover state */
+.c-top-nav__link-item-sample--hover:hover {
+  color: var(--clr-primary-accent-bgcolor);
+}
+
+/* Link style for focused active state */
+.c-top-nav__link-item-sample--active:focus,
+.c-top-nav__link-item-sample--current {
+  color: var(--clr-primary-accent-bgcolor);
+  font-size: var(--fs-body); 
+  font-weight: var(--fw-800-exrabold);
+}
+
+/* ================= COMPONENT IMPLEMENTATION WITH CODE SNIPPET =================*/
+
+.c-design__code-block {
+  border: lightgray 1px solid;
+  border-radius: 0 0 10px 10px;
+  overflow: auto;
+}
+* Style the scrollbar */
+.c-design__code-block::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+.c-design__code-block::-webkit-scrollbar-thumb {
+  background-color: lightgray; /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the border-radius of the scrollbar thumb */
+}
+
+.c-design__code-block::-webkit-scrollbar-track {
+  background-color: white; /* Set the color of the scrollbar track */
+  border-radius: 10px; /* Set the border-radius of the scrollbar track */
+}
+.c-design__code-snippet {
+  margin-left: -5rem; 
+}
+
+/* ================= BREADCRUMBS PAGE =================*/
+/* Inspired by https://codepen.io/marlina-farhin/pen/YzBeozb and https://codepen.io/jens-andersen/pen/OJBqRMm */
+/* Breadcrumbs container */
+.c-top-nav__breadcrumbs {
+  margin-top: 10px; /* Add margin to the top of the breadcrumbs container */
+}
+/* Styles for the breadcrumbs list */
+.c-top-nav__breadcrumbs-list {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+/* Styling for individual breadcrumb items */
+.c-top-nav__breadcrumb-item {
+  display: inline-block; /* Display items horizontally */
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+/* Remove underline from links with relative positioning*/
+.c-top-nav__breadcrumb-link {
+  text-decoration: none; 
+  position: relative; 
+}
+/* Slash character after breadcrumb links */
+.c-top-nav__breadcrumb-link::after {
+  content: '/'; /* Slash character */
+  position: absolute; 
+  right: -15px; /* Adjust the position of slash character */
+}
+/* Slash character after dynamically added breadcrumb links */
+.c-top-nav__breadcrumb-item .c-top-nav__breadcrumb-arrowhead::after {
+  content: '/'; /* Slash character */
+  position: absolute; 
+  right: -20px; 
+}
+/* Hide arrowhead for the last breadcrumb link */
+.c-top-nav__breadcrumb-item:last-child .c-top-nav__breadcrumb-link::after {
+  content: ''; 
+}
+
+/* ================= HERO PAGE =================*/
+
+/* 
+Ensure hero section content does not overflow 
+Add relative positioning for containing absolute positioned elements
+*/
+.c-hero-sample {
+  position: relative;
+  overflow: hidden;
+  height: 800px;
+}
+/* 
+Set the positioning and stacking order for the hero heading.
+The heading is positioned absolute within hero section,
+stacked above other elements with a z-index of 4,
+and placed 24rem from the top of its containing element.
+*/
+.c-hero__heading-sample{
+  position: absolute;
+  z-index: 2;
+  top: 24rem;
+}
+
+/* 
+Define styling for the hero overlay element.
+The overlay is positioned absolute within its own div container,
+stacked below the h1 with a z-index of 3.
+To ensure an overflow covering the lower portion of the image for h1 backgroun,
+set width to 150vw and is offset by -5rem from the left.
+The overlay is positioned 24rem from the top of its hero section container
+and with bgcolor opacity of 0.3
+*/
+.c-hero__overlay-sample {
+  position: absolute;
+  z-index: 1;
+  width: 150vw;
+  height: 53%;
+  top: 24rem;
+  background-color: var(--clr-primary-bgcolor);
+  opacity: 0.3;
+  left: -5rem;
+}
+
+/* 
+Set the height of the hero image to be 85% of the viewport height,
+filling up a significant portion of the viewport height for visual impact.
+*/
+.c-hero__img-sample {
+  height: 85vh;
+  transform: translateX(-242.5px) translateY(0px); /* apply transform to shift image position on the screen to the left */
+}
+/* 
+Position CTA absolute, placing it 41rem from the top of hero container.
+Set the z-index to 5 for stacking order.
+*/
+.c-hero__explore-link-sample {
+position: absolute;
+top: 41rem;
+z-index: 3;
+border-radius: 10px;
+padding-right: 2rem; 
+padding-left: 2rem; 
+}
+
+/* ================= CAROUSEL PAGE =================*/
+
+/* Position the testimonials wrapper relative to main */
+.c-testimonials__wrapper {
+  position: relative;
+}
+/* Style for the quotation mark using position absolute */
+.c-testimonials__quote {
+  font-size: 6rem;
+  position: absolute;
+}
+/* Center align the content */
+/* Styles from https://codepen.io/ecemgo/pen/WNappPz with modification to suit my layout */
+.c-testimonials__content {
+  text-align: center;
+  width: 85%;
+  height: 490px;    /* Fixed height for consistency across slides */
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.5px);   /* Creates a frosted glass-like effect */
+  border-radius: 10px;
+  user-select: none;    /* Disable the selection of text by the user */
+}
+/* Style for circular avatar */
+.c-testimonials__avatar {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  object-fit: cover; /* Maintain aspect ratio and covers the container without stretching */
+}
+/* Limit width for mobile to give space for the quote*/
+.c-testimonials__text {
+  width: 90%;
+}
+/* 
+Position left arrow wrapper absolute within its testimonial wrapper
+*/
+.c-testimonials__left-arrow-wrap {
+  position: absolute;
+  top: 50%; 
+  left: 5px;
+}
+/* 
+Position right arrow wrapper absolute within its testimonial wrapper
+*/
+.c-testimonials__right-arrow-wrap {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+}
+/* Consolidate styles of both left and right arrows */
+.c-testimonials__left-arrow,
+.c-testimonials__right-arrow {
+  width: calc(1.4rem + 0.6vmin); /* Set arrows width using a calculated value */
+  height: calc(1.4rem + 0.6vmin); /* Set arrows height using a calculated value */
+  border: solid var(--clr-primary-accent-bgcolor);
+  border-width: 0 calc(0.5rem + 0.2vmin) calc(0.5rem + 0.2vmin) 0;
+  cursor: pointer;
+  transform: rotate(135deg); /* Rotate the arrows clockwise by 135 degrees */
+  transition: transform 0.3s; 
+}
+.c-testimonials__left-arrow {
+  left: -15%;
+}
+/* Additional styling for the right arrow */
+.c-testimonials__right-arrow {
+  transform: rotate(-45deg); /* Rotate the right arrow counterclockwise by 45 degrees */
+}
+
+/* CSS code for carousel styling */
+/* Set the width of the testimonials wrapper to 100%  within section container */
+.c-testimonials__wrapper {
+  width: 100%; 
+  overflow: hidden; /* Hide any content that exceeds its width */
+}
+
+/* Hide all slides by default */
+.c-testimonials__content-slide {
+  display: none; 
+}
+
+/* Show only the active slide */
+.c-testimonials__content-slide--active {
+  display: block; 
+}
+
+/* Styles for pagination */
+
+.c-testimonials__page-indicator {
+  width: 35%; /* Set the width of the page-indicator container to 35% of c-testimonials__wrapper */
+  display: flex; /* Use flexbox layout to easily manipulate spacing */
+  gap: .5rem; /* Set the gap between page dots */
+}
+/* Styles from https://codepen.io/ecemgo/pen/WNappPz with modification to suit my layout */
+.c-testimonials__page {
+  display: inline-block; /* Display the page dots as inline blocks */
+  height: 15px; 
+  width: 15px; 
+  margin: 4px; /* Set margin around the page dots */
+  border-radius: 15px; /* to create rounded page indicators or page dots */
+  background: var(--clr-primary-accent-bgcolor); /* Set the color of page dots */
+  cursor: pointer; /* Set cursor to pointer to indicate clickable */
+  transition: all 0.5s ease-in-out; /* Apply transition effect for smooth changes */
+}
+
+/* Highlight the active page indicator */
+.c-testimonials__page--active {
+  width: 30px; /* Increase the width of the active page indicator */
+}
+
+/* ================= FOOTER PAGE =================*/
+
+/* Style the logo image with border effect as default identifier */
+.c-footer__logo-sample {
+  width: 150px;
+  height: 150px;
+  border: 1px solid var(--clr-primary-font-color);  /* Set the default color of the border around logo */
+  border-radius: 50%;
+}
+/* Set the hover effect for the logo image */
+.c-footer__logo-sample:hover {
+  border: 1px solid var(--clr-primary-accent-bgcolor);  /* Set the hover color of the border around logo */
+}
+/* 
+Set gap between elements to ensure consistent spacing between 
+the elements inside .c-footer__column 
+*/
+.c-footer__column {
+  gap: 1rem;
+}
+/* Overwrite the italicised font style of address tag*/
+.c-footer__contact-info {
+  font-style: normal;
+}
+
+/* ================= CARDS PAGE =================*/
+/* Apply rounded corners with lightgray border */
+.c-branch-out__blog-card {
+  border-radius: 10px;
+  border: lightgray 1px solid;
+}
+.c-branch-out__blog-card:hover {
+  border: 1px solid var(--clr-primary-accent-bgcolor);  /* Set the hover color of the border around blog card */
+}
+/* Remove underline from the blog name */
+.c-branch-out__blog-name {
+  text-decoration: none;
+ }
+/* Change font color on hover */
+.c-branch-out__blog-name:hover {
+  color: var(--clr-primary-accent-bgcolor); 
+}
+/* 
+Ensure consistent sizing of blog images with rounded corners
+*/
+.c-branch-out__blog-img {
+  height: 300px;
+  object-fit: cover;   /* Ensures the image covers the container */
+  border-radius: 10px;
+}
+
+/* ================= FORMS PAGE =================*/
+/* Add a gap between child elements within the form */
+.c-newsletter__form {
+  gap: 1rem; 
+}
+/* Set the width of the label wrapper to occupy the full width of the form container */
+.c-newsletter__label-wrapper {
+  width: 100%;
+  gap: .5rem; /* Adds spacing between child elements */
+}
+/* Style input fields and submit button with same consistency as other sections */
+.c-newsletter__input,
+.c-newsletter__submit {
+  width: 100%;
+  border-radius: 10px;
+  border: lightgray 1px solid;
+}
+/* Style for the label required field */
+.c-newsletter__label-required {
+  font-size: .8rem;
+  color: red; /* Set color to red for emphasis */
+  margin-left: .5rem; /* Add left margin for spacing between label */
+}
+/* ================= ACCORDION PAGE =================*/
+
+/* 
+Overwrite font size to 2.4rem to avoid widows in mobile view
+This will extend the entire text to display in one line
+*/
+.c-seasonal__heading {
+  font-size: 2.4rem;
+}
+/* Image within each card styled with rounded top corners */
+.c-seasonal__img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+/* Add gap between accordion cards */
+.c-seasonal__accordion-wrapper {
+  gap: 1rem; 
+  width: 80%;
+}
+/* Style accordion titles with design system cohesion and white bgcolor */
+.c-seasonal__accordion-header {
+  border-radius: 10px;
+  border: lightgray 1px solid;
+  width: 100%;
+  background-color: var(--clr-primary-accent-font);
+  cursor: pointer;
+  text-align: left;
+}
+/* Hide accordion-body by default */
+.c-seasonal__accordion-body {
+  display: none; 
+}
+/* Displays the accordion-body content when clicked */
+.c-seasonal__accordion-body--active {
+  display: block; 
+}
+
+/* ================= LISTS PAGE =================*/
+
+/* Set full width for category__overview */
+.c-category__overview {
+  width: 100%;
+}
+/* Style category tabs */
+.c-category__list-item {
+  list-style-type: none; /* Remove list item style */
+  border-radius: 10px 10px 0 0;
+  border: lightgray 1px solid;
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+}
+
+/* Styles the active state of the category__list-item */
+.c-category__list-item--active {
+  background-color: var(--clr-primary-accent-bgcolor);
+  color: var(--clr-primary-accent-font);
+}
+
+/* Style for category info container */
+.c-category__info-wrapper {
+  border: lightgray 1px solid;
+  border-radius: 0 0 10px 10px;
+}
+/* 
+Image styling for category, adjusting width and border radius
+*/
+.c-category__img {
+  width: 95%;
+  border-radius: 10px;
+}
+/* Adjust spacing between lines to improve readability */
+.c-category__text {
+  line-height: 2rem;
+}
+
+/* Set font color on hover effect */
+.c-category__cta-link:hover,
+.c-category__option-link--hover:hover {
+  color: var(--clr-primary-accent-bgcolor);
+}
+/* Style for drop-down menu */
+.c-category__drop-down {
+  display: none;  /* Initially hide the dropdown menu */
+  position: absolute;
+  z-index: 1;
+  right: .5rem;
+}
+/* Remove list item style */
+.c-category__drop-down-option {
+  list-style-type: none; 
+}
+/* Show dropdown menu on hover */
+.c-category__list-item:hover .c-category__drop-down {
+  display: block;
+  border-radius: 0 0 10px 10px;
+}
+
+/* ================= DEVELOPER PAGE =================*/
+
+/* Center-align text within the class */
+.c-dev {
+  text-align: center;
+  line-height: 3rem;
+}
+
+/* Set width and height to 100% and center horizontally using auto margins */
+.c-dev__portrait {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Limit max width to 80% */
+.c-dev__tools-skills {
+  max-width: 80%;
+}
+
+/* ================= RESPONSIVE LAYOUT FOR DESKTOP =================*/
+
+/* Large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+/* Desktop - Constrained Container */
+.desktop-width {
+  max-width: 100%;
+  /* Center container */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= HEADER SECTION =================*/
+/* Hide hamburger icon when viewport width reaches 1200 pixels and wider */
+.is-desktop-hidden {
+    display: none;
+}
+
+/* Display all links both top-level and sidebar menu for larger screens */
+.is-desktop-visible {
+    display: block;
+}
+
+/* Set font size and weight of Design System link */
+.c-top-nav__heading-link {
+  font-size: 4rem;
+  font-weight: var(--fw-800-exrabold);
+}
+
+
+/* ================= BODY  =================*/
+/* Body uses grid layout to position top nav and sidebar, while
+allowing scrolling for content within main section
+Code was modified from https://github.com/nic-dgl309-2024WI/spacing-recipes*/
+
+/* Use grid display with specific areas for header, aside, main, and footer */
+.c-body-wrapper {
+  --header-height: 6rem;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  grid-template-columns: 14rem 1fr;
+  gap: 1rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-left: auto;
+  isolation: isolate; /* Apply isolation to create a new stacking context */
+  
+
+}
+
+/* Use grid display and position to grid area - header */
+.c-top-nav-wrapper {
+  grid-area: header;
+  position: sticky;
+  z-index: 2; /* Position at the top of its container */
+  top: 0;
+  display: grid;
+  height: var(--header-height);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Use grid display and position to grid area - aside 
+Allow vertical overflow to enable scrolling
+Set position to fixed to keep it fixed in the viewport
+*/
+.c-sidebar__menu {
+  grid-area: sidebar;
+  position: relative;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  max-width: 15%;
+  width: 100%;
+  height: 100%;
+}
+
+/* Use grid display and position to grid area - main 
+Set minimum height to 180% of the viewport height */
+.c-content-box {
+  grid-area: main;
+  min-height: 180vh;
+  overflow-x: hidden; /* Prevent main content from scrolling */
+}
+
+/* Use grid display and position to grid area - footer */
+.c-footer {
+  grid-area: footer;
+  display: grid;
+  place-content: center; /* Center the content horizontally and vertically within the footer */
+  height: 5rem;
+  position: relative;
+  z-index: 2
+}
+/* 
+Set line height for sidebar menu items to ensure appropriate 
+spacing between menu items
+ */
+.c-sidebar__menu-list {
+  line-height: 21px;
+}
+
+
+/* ================= COLOURS PAGE =================*/
+
+/* Set width to 43% of the parent container */
+.c-swatch__card {
+  width: 43%;
+  margin-right: auto;
+}
+
+.c-swatch__wrapper {
+  flex-direction: row;
+}
+
+/* ================= TYPOGRAPHY PAGE =================*/
+
+/* Set the width of below tables to 75% */
+.c-typeface__table,
+.c-scaling__table,
+.c-type-weights__rank-table { 
+    width: 75%;
+}
+
+/* ================= SPACING PAGE =================*/
+
+/* Set table width to 70% of the viewport width */
+.c-margin__table,
+.c-padding__table {
+  width: 85%;
+}
+
+/* ================= CONTAINERS PAGE =================*/
+
+/* Set table width to 50% of the viewport width */
+.c-flex__table,
+.c-grid__table,
+.c-width__table {
+  width: 75%;
+}
+
+/* ================= NAVBAR PAGE =================*/
+
+/* Hide hamburger icon when viewport width reaches 1200 pixels and wider */
+.is-on-desktop-hidden {
+  display: none;
+}
+
+/* Display topnav menu for larger screens */
+.is-on-desktop-visible {
+  display: flex;
+}
+.c-top-nav__link-item-sample {
+  margin-right: 0; /* Remove margin-right for the rightmost link */
+}
+.c-top-nav-bar__sample {
+  width: 99%; /* Set the width of the top navigation container to 99% */
+  height: 120px;
+}
+
+.c-top-nav__logo-img-on-sample {
+  width: 130px;
+  top: 50px;
+  border: 1px solid var(--clr-primary-font-color);  /* Set the default color of the border around logo */
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 1rem;
+}
+/* Align menu to the end of its container */
+.c-top-nav__menu-list-sample {
+  align-self: end; 
+  padding-bottom: 1rem;
+  margin-right: 1rem;
+}
+.c-top-nav__links-list-sample {
+  width: 95%; /* Set the width of the links list to 95% */
+  list-style: none;
+  margin-right: 0;
+}
+
+/* ============ HERO PAGE ============*/
+/* 
+Set section height to increase vertical spacing between sections
+*/
+.c-hero-sample {
+  height: 400px;
+}
+/* 
+Ensure the hero image fills its container, with top and bottom portions clipped.
+Move the image up by 85px.
+*/
+.c-hero__img-sample {
+  width: 100%;
+  height: auto;
+  transform: translateY(-85px);
+}
+/* 
+Position h1 by 25rem from the top and 4rem from the left
+*/
+.c-hero__heading-sample {
+  top: 11rem;
+  left: 4rem;
+  line-height: 3.5rem;
+}
+/* 
+Position h1 background by 25em from the top
+*/
+.c-hero__overlay-sample {
+  top: 11rem;
+}
+/* 
+Position CTA button by 33rem from the top and 4rem from the left
+*/
+.c-hero__explore-link-sample {
+  top: 18rem;
+  left: 4rem;
+}
+
+/* ================= CAROUSEL PAGE =================*/
+/* Set fixed height for consistency across all slides */
+.c-testimonials__content {
+  height: 350px;   
+}
+/* Style for the quotation mark using position absolute */
+.c-testimonials__quote {
+  font-size: 6rem;
+  position: absolute;
+}
+.c-testimonials__text {
+  width: 80%;
+}
+
+/* Position left arrow wrapper 10px from the left edge of testimonials__wrapper's left edge */
+.c-testimonials__left-arrow-wrap {
+  left: 10px; 
+}
+/* Position right arrow wrapper 10px to the left edge of testimonials__wrapper's right edge*/
+.c-testimonials__right-arrow-wrap {
+  right: 10px;
+}
+/* Set the width of the page-indicator container to 15% of c-testimonials__wrapper */
+.c-testimonials__page-indicator {
+  width: 15%;
+}
+/* ================= FOOTER PAGE =================*/
+/* Reduce img size on desktop view due to constrained width */
+.c-footer__logo-sample {
+  width: 120px;
+  height: 120px;
+}
+/* 
+Set column gap for footer elements 
+ to create a consistent gap between columns within the footer layout
+*/
+.c-footer-sample,
+.c-footer__columns-wrapper {
+  flex-direction: row;
+  column-gap: .5rem;
+}
+/* 
+Set width for footer columns wrapper 
+to control its overall size without extra empty column 
+*/
+.c-footer__columns-wrapper {
+  width: 90%;
+}
+/* Align footer text elements along the main axis which runs vertically */
+.c-footer__col-heading,
+.c-footer__col-link-items,
+.c-footer__email,
+.c-footer__phone,
+.c-footer__location {
+  align-self: flex-start;
+  font-size: .8rem; /* Overwrite font size to 0.8rem for footer implementation on desktop view*/
+}
+/* Adds margin space at the top*/
+.c-footer__logo-sample {
+  margin-top: 3rem;
+  align-self: flex-start; /* Aligns the element to the start of the flex container */
+}
+/* Green color for links in hover state */
+.c-top-nav__link-item--hover:hover,
+.c-footer__col-link-items--hover:hover,
+.c-footer__email--hover:hover,
+.c-footer__socials--hover:hover {
+    color: var(--clr-primary-accent-bgcolor);
+}
+
+/* ================= CARDS PAGE =================*/
+
+/* 
+Set width of the blog card as 40% of blog-card-wrapper container for this card implementation
+*/
+.c-branch-out__blog-card {
+  width: 40%;
+}
+.c-branch-out__blog-overview {
+  letter-spacing: 0;
+}
+
+/* ================= FORMS PAGE =================*/
+
+/* 
+Style newsletter form container with same consistency as other sections
+*/
+.c-newsletter__form  {
+  flex-direction: row;   /* align items horizontally */
+  border-radius: 10px;
+  border: lightgray 1px solid;
+  padding: 1rem;
+}
+/* Overwrite margin top in mobile and set to 0 
+to level this with all input elements within the form 
+*/
+.c-newsletter__submit {
+  width: 43%;
+  margin-top: 0;
+  align-self: flex-end;   /* Align submit button to the flex-end of label-wrapper container */
+}
+
+/* ================= ACCORDION PAGE =================*/
+
+/* Add a padding of 2rem to the left and right of the accordion wrapper */
+.c-seasonal__accordion-wrapper {
+  padding-left: 2rem; 
+  padding-right: 2rem;
+}
+/* 
+Set width of the seasonal img to pixel 
+and with border-radius to the top and bottom left corners
+*/
+.c-seasonal__img {
+  width: 300px;
+  object-fit: cover; /* Scale img while preserving its aspect ratio and covering the container */
+  border-radius: 10px 0 0 10px;
+}
+
+/* ================= LISTS PAGE =================*/
+
+/* Reverses the order of the flex items along the main axis */
+.c-category__info-wrapper {
+  flex-direction: row-reverse;
+  width: 100%;
+  height: auto;   /* fixed height for the wrapper */
+  border-radius: 0px 10px 10px 10px;    /* Apply rounded corners except on top left */
+}
+/* 
+Desktop Styles for Category Image
+*/
+.c-category__img {
+  width: 40%;   /* 40% of the parent container */
+  margin-right: 1rem;
+  min-height: 300px; /* Adjusted to ensure a minimum height of 300px */
+  object-fit: cover;  /* Scale img while preserving its aspect ratio and covering the container */
+  object-position: center;  /* Center the image within its container */
+  max-height: 480px; /* Limit height to 480px max to prevent layout issues */
+}
+
+/* Limit text to 50 characters */
+.c-category__text-wrapper {
+  width: 55ch;   
+}
+
+/* ================= DEVELOPER PAGE =================*/
+
+/* Center-align text within the class */
+c-dev__intro-box {
+ text-align: left;
+}
+
+/* Set elements within to to flex direction to row, justify content to space between */
+.c-dev__tools-skills {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+}
+
+/* Set max width and max height to 50% */
+.c-dev__portrait {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+}

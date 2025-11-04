@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Google Font - Montserrat font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Link to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to design-system.css -->
+    <link rel="stylesheet" href="design-system.css">
+   
+    <title>Design System</title>
+</head>
+<body class="c-body-wrapper u-primary-bgcolor desktop-width">
+    
+<!-- Header section -->
+  <header class="c-top-nav-wrapper u-primary-bgcolor">
+    <!-- Place page title within header tag -->
+    <div class="c-top-nav l-flex-wrapper l-mx-2">
+      <div class="c-top-nav__page-title u-primary-font l-my-2">
+          <span class="c-top-nav__heading-name u-ff-sans-serif u-h1">
+            <a class="c-top-nav__heading-link c-top-nav__heading-link--hover c-top-nav__heading-link--active u-navlinks" href="design-system.html">Design System</a>
+          </span>
+      </div>
+      
+      <!-- Top-level navbar -->
+      <nav class="c-top-nav__menu u-ff-sans-serif l-my-2">
+          <div class="c-top-nav__links is-mobile-hidden is-desktop-visible u-primary-font">        
+              <a class="c-top-nav__link-items c-top-nav__link-items--hover c-top-nav__link-items--active u-navlinks" href="about-me.html">About Me</a>
+              <a class="c-top-nav__link-items c-top-nav__link-items--hover c-top-nav__link-items--active u-navlinks" href="index.html">Demo Site</a>
+          </div> 
+      </nav>
+  </div>
+  </header>
+
+    <!-- Vertical sidebar navigation -->
+    <aside class="c-sidebar u-primary-font u-ff-sans-serif">
+      <!-- Mobile navbar using hamburger icon
+      Below div block is sourced from https://edezekiel.medium.com/css-only-responsive-navigation-menu-c36ad02751e8
+      for responsive menu without JS -->
+    <input type="checkbox" id="toggle-side-menu" class="c-sidebar__mobile-toggle is-mobile-hidden">
+    <label for="toggle-side-menu" class="c-sidebar__mobile-toggle-icon is-desktop-hidden"><span class="c-sidebar__mobile-toggle-icon c-sidebar__mobile-toggle-icon--transform"></span></label>
+    <nav class="c-sidebar__menu is-mobile-hidden is-desktop-visible l-ml-2">
+      <ul class="c-sidebar__menu-list">
+          <br>
+          <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="about-me.html">About Me</a></li>
+          <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="index.html">Demo Site</a></li>
+          <br>
+      </ul>
+      <p class="c-sidebar__menu-category">Branding</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="colours.html">01 Colours</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="typography.html">02 Typography</a></li>
+        <br>
+      </ul>
+
+      <p class="c-sidebar__menu-category">Utilities</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="spacing.html">03 Spacing</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="containers.html">04 Containers</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--current u-navlinks" href="images.html">05 Images</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="interactive.html">06 Interactive</a></li>
+        <br>
+      </ul>
+
+      <p class="c-sidebar__menu-category">Navigation</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="navbars.html">07 Navbars</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="breadcrumbs.html">08 Breadcrumbs</a></li>
+        <br>
+      </ul>
+
+      <p class="c-sidebar__menu-category">Blocks</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="hero.html">09 Hero</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="carousel.html">10 Carousel</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="footer.html">11 Footer</a></li>
+        <br>
+      </ul>
+
+      <p class="c-sidebar__menu-category">Components</p>
+      <ul class="c-sidebar__menu-list">
+        <br>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="cards.html">12 Cards</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="forms.html">13 Forms</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="accordion.html">14 Accordion</a></li>
+        <li class="c-sidebar__list-item"><a class="c-sidebar__list-item--hover c-sidebar__list-item--active u-navlinks" href="lists.html">15 Lists</a></li>
+        <br>
+      </ul>
+    </nav>
+  </aside>
+  <main class="c-content-box l-mr-1 u-primary-font max-width-mobile u-ff-sans-serif">
+    
+    <!-- Main content starts here -->
+      <section class="c-design text-width">
+        <h1 class="c-design__heading u-h1 l-my-2">Images</h1>
+        <p class="c-design__overview u-secondary-font">Images are integral to websites, conveying information, adding visual interest, and enhancing user engagement. The images all across the Outback Nursery website, including the hero image, carousel images, and blog images, are carefully selected and optimised to ensure fast loading times and a seamless user experience. The images are also responsive, adapting to different screen sizes and resolutions.   
+        </p>
+        
+        <div class="c-design-wrapper l-p-1 l-mt-2">
+          <p class="c-design__intro u-subheading l-mb-2">Illustration of Image Implementations</p>
+          <p class="c-design__intro u-body l-mb-2">A. Round Image for Testimonial Avatar</p>
+          <img class="c-testimonials__avatar l-mb-2" src="images/testimonials-avatar-sarah.jpg" alt="woman holding a potted plant">
+
+          <p class="c-design__intro u-body l-mb-2">B. Rounded Corners for Blog Card</p>
+          <img class="c-branch-out__blog-img" src="images/dwarf-conifers.jpg" alt="Three potted dwarf conifers">
+
+        </div>
+        <div class="c-design__code-block l-p-1 l-mb-2"> 
+          <p class="c-design__intro u-subheading l-mb-2">HTML Code</p>
+          <p class="c-design__intro u-body">A. Round Image for Testimonial Avatar</p>
+          <pre class="c-design__code-snippet">
+            <code>
+              &lt;img class="c-testimonials__avatar l-mb-2" src="images/testimonials-avatar-sarah.jpg" alt="woman holding a potted plant"&gt;
+            </code>
+          </pre>    
+          <p class="c-design__intro u-body">B. Rounded Corners for Blog Card</p>
+          <pre class="c-design__code-snippet">
+            <code>
+              &lt;img class="c-branch-out__blog-img" src="images/dwarf-conifers.jpg" alt="Three potted dwarf conifers"&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
+  </main>
+  <footer class="c-footer u-primary-bgcolor">
+
+  </footer>
+</body>
+</html>
